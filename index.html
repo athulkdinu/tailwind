@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Toast - Premium Celebration Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'premium': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'luxury': {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
+                        },
+                        'platinum': {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            300: '#d4d4d8',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b',
+                        },
+                        'gold': {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: 
+                linear-gradient(135deg, rgba(254, 247, 240, 0.95) 0%, rgba(253, 238, 225, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-morphism {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modern-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.9));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        }
+        
+        .premium-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .luxury-gradient {
+            background: linear-gradient(135deg, #713f12 0%, #a16207 50%, #eab308 100%);
+        }
+        
+        .premium-text {
+            background: linear-gradient(135deg, #eab308 0%, #fde047 50%, #facc15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-divider {
+            position: relative;
+        }
+        
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f18965, #ee7046);
+            border-radius: 2px;
+        }
+        
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .asymmetric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+
+        
+
+        
+        .stagger-animation > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: staggerIn 0.8s ease-out forwards;
+        }
+        
+        .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+        .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+        .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+        .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes staggerIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-16px) scale(1.02);
+            box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ee7046, #f18965, #d85a2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+
+        
+        .image-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        
+        .scroll-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .confetti-bg {
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(244, 162, 132, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(241, 137, 101, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(245, 225, 195, 0.4) 0%, transparent 50%);
+        }
+        
+
+    </style>
+</head>
+<body class="font-inter bg-premium-900">
+    <!-- Premium Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-premium-900/95 backdrop-blur-md border-b border-luxury-400/20 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-luxury-500 to-luxury-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-premium-900 font-bold text-lg">T</span>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-playfair font-bold text-white">Timeless Toast</h1>
+                            <p class="text-xs text-luxury-300 -mt-1">Premium Events</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-premium-300 hover:text-luxury-400 transition-all duration-300 font-medium relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-luxury-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#stores" class="text-premium-300 hover:text-luxury-400 transition-all duration-300 font-medium relative group">
+                        Services
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-luxury-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#events" class="text-premium-300 hover:text-luxury-400 transition-all duration-300 font-medium relative group">
+                        Events
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-luxury-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#gallery" class="text-premium-300 hover:text-luxury-400 transition-all duration-300 font-medium relative group">
+                        Gallery
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-luxury-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="text-premium-300 hover:text-luxury-400 transition-all duration-300 font-medium relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-luxury-500 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center text-premium-300 text-sm">
+                        <i class="fas fa-phone mr-2 text-luxury-400"></i>
+                        <span class="font-medium">+91 9876543210</span>
+                    </div>
+                    <button class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-premium-900 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-luxury-500/30 transition-all duration-300 font-bold text-sm">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+         <!--  Hero Section -->
+     <section id="home" class="relative min-h-screen premium-gradient overflow-hidden">
+         <!--  Background Elements -->
+         <div class="absolute inset-0 opacity-30">
+             <div class="absolute top-20 left-20 w-64 h-64 bg-luxury-500/30 rounded-full blur-3xl animate-pulse"></div>
+             <div class="absolute bottom-32 right-32 w-80 h-80 bg-luxury-400/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+             <div class="absolute top-1/2 left-1/3 w-32 h-32 bg-luxury-600/40 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+         </div>
+         
+         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
+             <div class="grid lg:grid-cols-12 gap-12 items-center min-h-[85vh]">
+                 <!-- Left Content - 7 columns -->
+                 <div class="lg:col-span-7 text-center lg:text-left">
+                                          <!-- Premium Badge -->
+                     <div class="inline-flex items-center glass-morphism border border-luxury-400/30 rounded-full px-8 py-4 mb-8 shadow-2xl">
+                         <div class="flex items-center">
+                             <div class="w-3 h-3 bg-luxury-500 rounded-full mr-3 animate-pulse"></div>
+                             <span class="text-sm font-bold text-luxury-300 tracking-wider uppercase">✨ Luxury Celebration Specialists</span>
+                             <div class="w-3 h-3 bg-luxury-400 rounded-full ml-3 animate-pulse"></div>
+                         </div>
+                     </div>
+                     
+                     <!-- Main Heading -->
+                     <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-playfair font-black mb-8 leading-tight">
+                         <span class="text-white block mb-2">Celebrate Every </span>
+                         <span class="premium-text block mb-2">Moment in Style</span>
+
+                     </h1>
+                     
+                     <!-- Description -->
+                     <p class="text-xl lg:text-2xl text-premium-300 leading-relaxed mb-12 max-w-3xl mx-auto lg:mx-0">
+                        Turning your special moments into unforgettable celebrations.
+                     </p>
+                     
+                     <!-- Premium CTA Buttons -->
+                     <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-16">
+                         <button class="group bg-gradient-to-r from-luxury-600 to-luxury-500 text-premium-900 px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-luxury-500/30 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                             <span class="relative z-10 flex items-center">
+                                 <i class="fas fa-calendar-plus mr-3"></i>
+                                 Start Your Journey
+                                 <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform duration-300"></i>
+                             </span>
+                         </button>
+                         <button class="group glass-morphism border-2 border-luxury-400/30 text-luxury-300 px-10 py-5 rounded-2xl font-bold text-lg hover:border-luxury-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                             <i class="fas fa-play-circle mr-3 text-luxury-400 group-hover:scale-110 transition-transform"></i>
+                             Watch Our Magic
+                         </button>
+                     </div>
+                     
+
+                 </div>
+                 
+                 <!-- Right Visual - 5 columns -->
+                 <div class="lg:col-span-5 relative mt-16 lg:mt-0">
+                     <!-- Main Hero Showcase -->
+                     <div class="relative">
+                         <!-- Hero Image -->
+                         <div class="relative rounded-3xl overflow-hidden shadow-2xl modern-card group">
+                             <img src="./wedding.jpg" 
+                                  alt="Luxury celebration event" 
+                                  class="w-full h-[500px] lg:h-[600px] object-cover group-hover:scale-110 transition-transform duration-1000">
+                             
+                             <!-- Elegant Overlay -->
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                             
+                             <!-- Floating Play Button -->
+                             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                 <div class="w-20 h-20 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30 hover:scale-110 transition-transform duration-300 cursor-pointer">
+                                     <i class="fas fa-play text-white text-2xl ml-1"></i>
+                                 </div>
+                             </div>
+                             
+
+                         </div>
+                         
+
+                         
+                         <!-- Premium Decorative Elements -->
+                         <div class="absolute top-20 right-20 w-4 h-4 bg-luxury-400 rounded-full animate-ping"></div>
+                         <div class="absolute bottom-32 left-16 w-3 h-3 bg-luxury-500 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+                         <div class="absolute top-1/3 -left-4 w-2 h-2 bg-luxury-300 rounded-full animate-ping" style="animation-delay: 2s;"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         
+         <!-- Premium Scroll Indicator -->
+         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+              
+             <div class="w-8 h-12 border-2 border-luxury-400/50 rounded-full flex justify-center relative">
+                 <div class="w-1 h-3 bg-gradient-to-b from-luxury-500 to-luxury-400 rounded-full mt-3 animate-bounce"></div>
+             </div>
+         </div>
+    </section>
+
+        <!-- Premium Featured Services Section -->
+    <section id="stores" class="py-24 bg-premium-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 section-divider pt-8">
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold text-white mb-6">
+                    Our <span class="premium-text">Signature</span> Services
+                </h2>
+                <p class="text-lg text-premium-300 max-w-3xl mx-auto leading-relaxed">
+                    From intimate gatherings to grand celebrations, we provide comprehensive event solutions tailored to your vision
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 stagger-animation">
+                <!-- Left Column - 2 services stacked -->
+                <div class="space-y-8">
+                    <!-- Cakes Services -->
+                    <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                        <div class="flex">
+                            <div class="w-1/3 h-48 relative">
+                                <img src="./cakes.jpg" 
+                                     alt="Beautiful celebration cake" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+                            </div>
+                            <div class="w-2/3 p-8">
+                                <div class="flex items-start justify-between mb-4">
+                                    <h3 class="text-2xl font-playfair font-bold text-white">Signature Celebration Cakes</h3>
+                                    <div class="w-8 h-8 bg-luxury-500/20 rounded-lg flex items-center justify-center group-hover:bg-luxury-500 transition-colors">
+                                        <i class="fas fa-utensils text-luxury-400 group-hover:text-white text-sm"></i>
+                                    </div>
+                                </div>
+                                <p class="text-premium-300 mb-6 leading-relaxed">Exquisite handcrafted cakes designed to make every milestone sweeter — from classic favorites to custom creations.</p>
+                                <div class="flex items-center text-luxury-400 font-semibold group-hover:translate-x-2 transition-transform">
+                                    <span class="mr-2">Explore Menu</span>
+                                    <i class="fas fa-arrow-right text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wine & Beverages -->
+                    <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer" onclick="window.location.href='wine.html'">
+                        <div class="flex">
+                            <div class="w-1/3 h-48 relative">
+                                <img src="./beverages.jpeg" 
+                                     alt="Premium wine collection" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+                            </div>
+                            <div class="w-2/3 p-8">
+                                <div class="flex items-start justify-between mb-4">
+                                    <h3 class="text-2xl font-playfair font-bold text-white">Premium Wines & Beverages</h3>
+                                    <div class="w-8 h-8 bg-luxury-500/20 rounded-lg flex items-center justify-center group-hover:bg-luxury-500 transition-colors">
+                                        <i class="fas fa-wine-glass text-luxury-400 group-hover:text-white text-sm"></i>
+                                    </div>
+                                </div>
+                                <p class="text-premium-300 mb-6 leading-relaxed">Raise a toast with curated wines, sparkling champagnes, and signature cocktails — perfect for every celebration.</p>
+                                <div class="flex items-center text-luxury-400 font-semibold group-hover:translate-x-2 transition-transform">
+                                    <span class="mr-2">View Collection</span>
+                                    <i class="fas fa-arrow-right text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - 2 services stacked -->
+                <div class="space-y-8">
+                    <!-- Event Design -->
+                    <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer " onclick="window.location.href='event.html'">
+                        <div class="flex">
+                            <div class="w-1/3 h-48 relative">
+                           <img src="./bday.jpeg" 
+                                     alt="Party decorations and setup" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+                            </div>
+                            <div class="w-2/3 p-8">
+                                <div class="flex items-start justify-between mb-4">
+                                    <h3 class="text-2xl font-playfair font-bold text-white">Event Styling & Decor</h3>
+                                    <div class="w-8 h-8 bg-luxury-500/20 rounded-lg flex items-center justify-center group-hover:bg-luxury-500 transition-colors">
+                                        <i class="fas fa-palette text-luxury-400 group-hover:text-white text-sm"></i>
+                                    </div>
+                                </div>
+                                <p class="text-premium-300 mb-6 leading-relaxed">Transform any venue into a magical celebration space with bespoke decorations, themes, and personalized details.</p>
+                                <div class="flex items-center text-luxury-400 font-semibold group-hover:translate-x-2 transition-transform">
+                                    <span class="mr-2">See Portfolio</span>
+                                    <i class="fas fa-arrow-right text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luxury Gifts -->
+                    <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer" onclick="window.location.href='gift.html'">
+                        <div class="flex">
+                            <div class="w-1/3 h-48 relative">
+                                <img src="./gift.jpg" 
+                                     alt="Luxury gift boxes and favors" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+                            </div>
+                            <div class="w-2/3 p-8">
+                                <div class="flex items-start justify-between mb-4">
+                                    <h3 class="text-2xl font-playfair font-bold text-white">Luxury Gifts & Keepsakes</h3>
+                                    <div class="w-8 h-8 bg-luxury-500/20 rounded-lg flex items-center justify-center group-hover:bg-luxury-500 transition-colors">
+                                        <i class="fas fa-gift text-luxury-400 group-hover:text-white text-sm"></i>
+                                    </div>
+                                </div>
+                                <p class="text-premium-300 mb-6 leading-relaxed">Discover elegant, handpicked gifts and personalized treasures to make your celebrations truly unforgettable.</p>
+                                <div class="flex items-center text-luxury-400 font-semibold group-hover:translate-x-2 transition-transform">
+                                    <span class="mr-2">Browse Gifts</span>
+                                    <i class="fas fa-arrow-right text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <div class="modern-card rounded-2xl p-8 inline-block">
+                    <p class="text-premium-300 mb-4">Ready to start planning your perfect event?</p>
+                    <button class="bg-luxury-600 text-white px-8 py-3 rounded-xl hover:bg-luxury-700 transition-all duration-300 font-semibold shadow-lg">
+                        Schedule Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Event Management Section -->
+    <section id="events" class="py-24 bg-premium-700 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 section-divider pt-8">
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold text-white mb-6">
+                    Event <span class="premium-text">Specializations</span>
+                </h2>
+                <p class="text-lg text-premium-300 max-w-3xl mx-auto leading-relaxed">
+                    Every celebration is unique. Our specialized teams craft bespoke experiences for life's most important moments
+                </p>
+            </div>
+            
+            <!-- Main Featured Event -->
+            <div class="mb-16">
+                <div class="modern-card rounded-3xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="h-80 lg:h-96 relative">
+                            <img src="./wedding.jpg" 
+                                 alt="Elegant wedding reception setup" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                    <span class="text-white text-sm font-medium">✨ Most Popular</span>
+                                </div>
+                                <h3 class="text-4xl font-playfair font-bold text-white mb-2">Dream Weddings</h3>
+                                <p class="text-white/90 text-lg">Where love stories become legendary celebrations</p>
+                            </div>
+                        </div>
+                        <div class="p-12 flex flex-col justify-center">
+                            <div class="mb-8">
+                                <h4 class="text-2xl font-playfair font-bold text-white mb-4">Complete Wedding Experience</h4>
+                                <p class="text-premium-300 leading-relaxed mb-6">From intimate ceremonies to grand receptions, we orchestrate every detail of your perfect day with unmatched elegance and precision.</p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-8">
+                                    <div class="flex items-center">
+                                        <div class="w-2 h-2 bg-luxury-600 rounded-full mr-3"></div>
+                                        <span class="text-premium-300 text-sm">Venue Selection</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-2 h-2 bg-luxury-600 rounded-full mr-3"></div>
+                                        <span class="text-premium-300 text-sm">Floral Design</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-2 h-2 bg-luxury-600 rounded-full mr-3"></div>
+                                        <span class="text-premium-300 text-sm">Catering & Bar</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-2 h-2 bg-luxury-600 rounded-full mr-3"></div>
+                                        <span class="text-premium-300 text-sm">Photography</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm text-luxury-500 mb-1">Starting from</p>
+                                    <p class="text-2xl font-bold text-white">₹2,50,000</p>
+                                </div>
+                                <button class="bg-luxury-600 text-white px-8 py-3 rounded-xl hover:bg-luxury-700 transition-all duration-300 font-semibold group">
+                                    <span class="mr-2">Plan Wedding</span>
+                                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Events Grid -->
+            <div class="grid md:grid-cols-3 gap-8 stagger-animation">
+                <!-- Birthday Events -->
+                <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="h-48 relative">
+                        <img src="./bparty.jpg" 
+                             alt="Birthday celebration with decorations" 
+                             class="w-full h-full object-cover rounded-t-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-playfair font-bold text-white mb-1">Birthday Celebrations</h3>
+                            <p class="text-white/80 text-sm">Magical moments for all ages</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-premium-300 text-sm mb-4 leading-relaxed">Custom themes, entertainment, and memorable experiences that make every birthday unforgettable.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white font-semibold">From ₹45,000</span>
+                            <div class="flex items-center text-blush-600 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                                <span class="mr-1">Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anniversary Events -->
+                <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="h-48 relative">
+                        <img src="./anniverserry.jpg" 
+                             alt="Romantic anniversary celebration" 
+                             class="w-full h-full object-cover rounded-t-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-playfair font-bold text-white mb-1">Anniversary Parties</h3>
+                            <p class="text-white/80 text-sm">Romantic milestone celebrations</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-premium-300 text-sm mb-4 leading-relaxed">Intimate gatherings that honor love stories with elegant touches and personalized details.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white font-semibold">From ₹65,000</span>
+                            <div class="flex items-center text-blush-600 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                                <span class="mr-1">Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Events -->
+                <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="h-48 relative">
+                        <img src="./coperative.jpg" 
+                             alt="Professional corporate event" 
+                             class="w-full h-full object-cover rounded-t-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-playfair font-bold text-white mb-1">Corporate Events</h3>
+                            <p class="text-white/80 text-sm">Professional business gatherings</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-premium-300 text-sm mb-4 leading-relaxed">Sophisticated corporate celebrations that strengthen relationships and celebrate achievements.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white font-semibold">From ₹85,000</span>
+                            <div class="flex items-center text-blush-600 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                                <span class="mr-1">Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="trending" class="py-24 bg-premium-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 section-divider pt-8">
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold text-white mb-6">
+                    Featured <span class="gradient-text">Collections</span>
+                </h2>
+                <p class="text-lg text-premium-300 max-w-3xl mx-auto leading-relaxed">
+                    Handpicked selections that make every celebration extraordinary
+                </p>
+            </div>
+            
+            <!-- Featured Product Showcase -->
+            <div class="mb-16">
+                <div class="modern-card rounded-3xl overflow-hidden">
+                    <div class="grid lg:grid-cols-3 gap-0">
+                        <!-- Main Product -->
+                        <div class="lg:col-span-2 h-80 lg:h-96 relative overflow-hidden rounded-l-3xl">
+                            <img src="./bbcake.jpeg" 
+                                 alt="Signature celebration cake" 
+                                 class="w-full h-full object-cover object-center">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-luxury-600 text-white px-3 py-2 rounded-full text-sm font-bold">🔥 Bestseller</span>
+                            </div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <h3 class="text-4xl font-playfair font-bold text-white mb-3">Signature Celebration Cake</h3>
+                                <p class="text-white/90 text-lg mb-4">Multi-layered masterpiece with premium ingredients</p>
+                                <div class="flex items-center space-x-6">
+                                    <div class="flex items-center text-white/80">
+                                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                        <span class="font-semibold">4.9</span>
+                                        <span class="ml-1">(127 reviews)</span>
+                                    </div>
+                                    <div class="flex items-center text-white/80">
+                                        <i class="fas fa-clock mr-1"></i>
+                                        <span>24h notice</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Details -->
+                        <div class="p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="mb-8">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-3xl font-bold text-white">₹85,000</span>
+                                    <span class="text-lg text-gray-400 line-through ml-3">₹120,000</span>
+                                    <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-medium ml-3">30% OFF</span>
+                                </div>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm text-premium-300">
+                                        <i class="fas fa-check text-blush-600 mr-3"></i>
+                                        <span>Serves 12-15 people</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-premium-300">
+                                        <i class="fas fa-check text-blush-600 mr-3"></i>
+                                        <span>Custom message included</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-premium-300">
+                                        <i class="fas fa-check text-blush-600 mr-3"></i>
+                                        <span>Premium packaging</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-premium-300">
+                                        <i class="fas fa-check text-blush-600 mr-3"></i>
+                                        <span>Free delivery in city</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="bg-luxury-600 text-white px-8 py-4 rounded-xl hover:bg-luxury-700 transition-all duration-300 font-semibold group w-full">
+                                <span class="mr-2">Add to Cart</span>
+                                <i class="fas fa-shopping-cart group-hover:scale-110 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+                <!-- Wine Collection -->
+                <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./bbeinr.jpg" 
+                             alt="Premium wine selection" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs font-bold">New Arrival</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-playfair font-bold text-white mb-1">Premium Wine Selection</h3>
+                            <p class="text-white/80 text-sm">Curated vintages for special occasions</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xl font-bold text-white">₹89,000</span>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-premium-300 text-sm ml-1">4.8 (45)</span>
+                            </div>
+                        </div>
+                        <p class="text-premium-300 text-sm mb-4">Aged to perfection with complex flavors and smooth finish.</p>
+                        <button class="w-full border-2 border-purple-200 text-purple-600 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300 font-medium text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gift Collection -->
+                <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./laxury.jpg" 
+                             alt="Luxury gift hamper" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-gold-600 text-white px-2 py-1 rounded text-xs font-bold">Limited Edition</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-playfair font-bold text-white mb-1">Luxury Gift Hamper</h3>
+                            <p class="text-white/80 text-sm">Thoughtfully curated premium gifts</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xl font-bold text-white">₹145,000</span>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-premium-300 text-sm ml-1">5.0 (28)</span>
+                            </div>
+                        </div>
+                        <p class="text-premium-300 text-sm mb-4">Premium collection of gourmet treats and elegant keepsakes.</p>
+                        <button class="w-full border-2 border-gold-200 text-gold-600 py-2 rounded-lg hover:bg-gold-600 hover:text-white transition-all duration-300 font-medium text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Party Essentials -->
+                <div class="modern-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./decor.jpg" 
+                             alt="Party decoration package" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-600 text-white px-2 py-1 rounded text-xs font-bold">Popular</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-playfair font-bold text-white mb-1">Party Decor Package</h3>
+                            <p class="text-white/80 text-sm">Complete decoration solution</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xl font-bold text-white">₹65,000</span>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-premium-300 text-sm ml-1">4.7 (89)</span>
+                            </div>
+                        </div>
+                        <p class="text-premium-300 text-sm mb-4">Everything you need to create the perfect party atmosphere.</p>
+                        <button class="w-full border-2 border-emerald-200 text-emerald-600 py-2 rounded-lg hover:bg-emerald-600 hover:text-white transition-all duration-300 font-medium text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Success Stories Showcase Section -->
+    <section id="gallery" class="py-24 bg-premium-800 relative overflow-hidden">
+        <!-- Premium Floating Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-luxury-400/30 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-32 right-10 w-80 h-80 bg-luxury-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/3 w-32 h-32 bg-luxury-300/40 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Premium Enhanced Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center glass-morphism border border-luxury-400/30 px-6 py-3 rounded-full mb-6 shadow-lg">
+                    <i class="fas fa-camera text-luxury-400 mr-2"></i>
+                    <span class="text-luxury-300 font-bold text-sm uppercase tracking-wider">Real Celebrations</span>
+                    <i class="fas fa-heart text-luxury-400 ml-2"></i>
+                </div>
+                
+                <h2 class="text-4xl lg:text-6xl font-playfair font-black text-white mb-6 leading-tight">
+                    Success <span class="premium-text">Stories</span> & 
+                    <br class="hidden sm:block">Magical <span class="premium-text">Moments</span>
+                </h2>
+                
+                <p class="text-xl text-premium-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                    Every celebration is unique, every moment precious. Discover how we've turned dreams into unforgettable realities.
+                </p>
+                
+                <!-- Premium Filter Categories -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button class="bg-luxury-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-luxury-700 transition-all duration-300 shadow-lg">
+                        🎉 All Events
+                    </button>
+                    <button class="glass-morphism text-luxury-300 border border-luxury-400/30 px-6 py-3 rounded-full font-semibold hover:border-luxury-400 hover:text-luxury-400 transition-all duration-300">
+                        💍 Weddings
+                    </button>
+                    <button class="glass-morphism text-luxury-300 border border-luxury-400/30 px-6 py-3 rounded-full font-semibold hover:border-luxury-400 hover:text-luxury-400 transition-all duration-300">
+                        🎂 Birthdays
+                    </button>
+                    <button class="glass-morphism text-luxury-300 border border-luxury-400/30 px-6 py-3 rounded-full font-semibold hover:border-luxury-400 hover:text-luxury-400 transition-all duration-300">
+                        🏢 Corporate
+                    </button>
+                    <button class="glass-morphism text-luxury-300 border border-luxury-400/30 px-6 py-3 rounded-full font-semibold hover:border-luxury-400 hover:text-luxury-400 transition-all duration-300">
+                        ❤️ Anniversaries
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Premium Featured Success Story -->
+            <div class="mb-16">
+                <div class="modern-card rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <!-- Story Image -->
+                        <div class="lg:col-span-3 h-64 lg:h-96 relative">
+                            <img src="./wedding.jpg" 
+                                 alt="Dream wedding celebration" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
+                            <div class="absolute top-6 left-6">
+                                <div class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-4 py-2 rounded-full shadow-lg">
+                                    <span class="text-sm font-bold">⭐ Featured Story</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <div class="flex items-center space-x-3 text-white/90">
+                                    <div class="w-2 h-2 bg-luxury-400 rounded-full animate-pulse"></div>
+                                    <span class="text-sm font-medium">Live Moments</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Story Content -->
+                        <div class="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="mb-6">
+                                <h3 class="text-3xl lg:text-4xl font-playfair font-bold text-white mb-4">
+                                    Sarah & Akhil's Dream Wedding
+                                </h3>
+                                <p class="text-premium-300 text-lg leading-relaxed mb-6">
+                                    "They transformed our vision into reality! Every detail was perfect, from the floral arrangements to the surprise dance performance. Our guests are still talking about it!"
+                                </p>
+                                
+                                <div class="flex items-center mb-6">
+                                    <div class="flex text-yellow-400 mr-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-premium-300 font-semibold">5.0 Rating</span>
+                                </div>
+                                
+                                <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                                    <div>
+                                        <div class="text-2xl font-bold text-luxury-400">150</div>
+                                        <div class="text-premium-300">Guests</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-luxury-400">12hr</div>
+                                        <div class="text-premium-300">Event</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-luxury-400">100%</div>
+                                        <div class="text-premium-300">Joy</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-6 py-3 rounded-2xl hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 font-semibold group self-start">
+                                <span class="mr-2">Read Full Story</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Event Showcase Grid -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-16">
+                <!-- Wedding Moment -->
+                <div class="group">
+                    <div class="modern-card rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="h-64 relative overflow-hidden">
+                            <img src="./anniverserry.jpg" 
+                                 alt="Romantic anniversary celebration" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
+                                    💕 Anniversary
+                                </div>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h4 class="text-xl font-playfair font-bold text-white mb-1">Golden Anniversary</h4>
+                                <p class="text-white/80 text-sm">50 years of love celebrated</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-premium-300 text-sm font-medium">Guest Count: 80</span>
+                                <div class="flex items-center text-yellow-400">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span class="text-premium-300 text-sm">4.9</span>
+                                </div>
+                            </div>
+                            <p class="text-premium-300 text-sm mb-4">An intimate celebration of enduring love with family and close friends in an elegant ballroom setting.</p>
+                            <button class="text-luxury-400 font-semibold text-sm hover:text-luxury-300 transition-colors group">
+                                <span class="mr-1">View Details</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birthday Celebration -->
+                <div class="group">
+                    <div class="modern-card rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="h-64 relative overflow-hidden">
+                            <img src="./bdaystory.jpg" 
+                                 alt="Vibrant birthday party celebration" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
+                                    🎂 Birthday
+                                </div>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h4 class="text-xl font-playfair font-bold text-white mb-1">Sweet 16 Celebration</h4>
+                                <p class="text-white/80 text-sm">Magical coming-of-age party</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-premium-300 text-sm font-medium">Guest Count: 45</span>
+                                <div class="flex items-center text-yellow-400">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span class="text-premium-300 text-sm">5.0</span>
+                                </div>
+                            </div>
+                            <p class="text-premium-300 text-sm mb-4">A dreamy birthday celebration with custom decorations, themed activities, and unforgettable memories.</p>
+                            <button class="text-luxury-400 font-semibold text-sm hover:text-luxury-300 transition-colors group">
+                                <span class="mr-1">View Details</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Corporate Event -->
+                <div class="group">
+                    <div class="modern-card rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="h-64 relative overflow-hidden">
+                            <img src="./costory.jpg" 
+                                 alt="Professional corporate event" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
+                                    🏢 Corporate
+                                </div>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h4 class="text-xl font-playfair font-bold text-white mb-1">Annual Awards Gala</h4>
+                                <p class="text-white/80 text-sm">Prestigious company milestone</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-premium-300 text-sm font-medium">Guest Count: 120</span>
+                                <div class="flex items-center text-yellow-400">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span class="text-premium-300 text-sm">4.8</span>
+                                </div>
+                            </div>
+                            <p class="text-premium-300 text-sm mb-4">A sophisticated corporate celebration with professional catering, AV setup, and elegant networking spaces.</p>
+                            <button class="text-luxury-400 font-semibold text-sm hover:text-luxury-300 transition-colors group">
+                                <span class="mr-1">View Details</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Call to Action & Newsletter Combined -->
+            <div class="mt-20">
+                <div class="bg-gradient-to-r from-blush-50 to-cream-50 rounded-3xl overflow-hidden border border-blush-100 shadow-xl">
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <!-- Left Content - Main CTA -->
+                        <div class="lg:col-span-3 p-8 lg:p-16 text-center lg:text-left">
+                            <div class="mb-8">
+                                <div class="inline-flex items-center bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-6 py-3 rounded-full mb-6 shadow-lg">
+                                    <i class="fas fa-sparkles mr-2 animate-pulse"></i>
+                                    <span class="font-bold text-sm">Your Story Starts Here</span>
+                                    <i class="fas fa-sparkles ml-2 animate-pulse"></i>
+                                </div>
+                                
+                                <h3 class="text-3xl lg:text-4xl xl:text-5xl font-playfair font-bold text-white mb-6">
+                                    Ready to Create Your Own <br class="hidden sm:block">
+                                    <span class="premium-text">Magical Moment?</span>
+                                </h3>
+                                
+                                <p class="text-lg text-premium-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+                                    Join our family of 500+ happy clients who trusted us to make their special occasions extraordinary. 
+                                    Let's bring your vision to life!
+                                </p>
+                            </div>
+                            
+                            <!-- Premium Action Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                                <button class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-8 py-4 rounded-2xl hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 font-bold shadow-xl transform hover:scale-105 group">
+                                    <i class="fas fa-images mr-3"></i>
+                                    <span class="mr-2">View Portfolio</span>
+                                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                                <button class="glass-morphism border-2 border-luxury-400/30 text-luxury-300 px-8 py-4 rounded-2xl hover:border-luxury-400 hover:text-luxury-400 transition-all duration-300 font-bold shadow-lg">
+                                    <i class="fas fa-calendar-check mr-3"></i>
+                                    Free Consultation
+                                </button>
+                            </div>
+                            
+                            <!-- Premium Quick Stats -->
+                            <div class="grid grid-cols-2 gap-6 text-center lg:text-left">
+                                <div>
+                                    <div class="text-2xl font-bold text-luxury-400 mb-1">500+</div>
+                                    <div class="text-sm text-premium-300">Events Planned</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-luxury-400 mb-1">5.0</div>
+                                    <div class="text-sm text-premium-300">Perfect Rating</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Right Content - Newsletter -->
+                        <div class="lg:col-span-2 modern-card p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="mb-6">
+                                <div class="inline-block glass-morphism border border-luxury-400/30 rounded-full px-4 py-2 mb-4">
+                                    <span class="text-luxury-300 text-sm font-medium">💌 Stay Connected</span>
+                                </div>
+                                <h4 class="text-2xl font-playfair font-bold text-white mb-4">
+                                    Never Miss a <span class="text-luxury-400">Celebration</span>
+                                </h4>
+                                <p class="text-premium-300 text-sm leading-relaxed mb-6">
+                                    Get exclusive offers, seasonal packages, and celebration inspiration delivered to your inbox.
+                                </p>
+                            </div>
+                            
+                            <!-- Premium Newsletter Form -->
+                            <div class="space-y-4">
+                                <div class="relative">
+                                    <input type="email" 
+                                           placeholder="Enter your email address" 
+                                           class="w-full px-4 py-3 border-2 border-luxury-400/30 rounded-xl focus:border-luxury-400 focus:outline-none text-sm bg-premium-800/50 text-white placeholder-premium-400">
+                                    <i class="fas fa-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-luxury-400"></i>
+                                </div>
+                                <button class="w-full bg-gradient-to-r from-luxury-600 to-luxury-500 text-white py-3 rounded-xl hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 font-semibold text-sm">
+                                    Subscribe Now
+                                </button>
+                            </div>
+                            
+                            <!-- Premium Benefits -->
+                            <div class="mt-6 space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 bg-luxury-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-check text-luxury-400 text-xs"></i>
+                                    </div>
+                                    <span class="text-premium-300 text-xs">Exclusive discounts up to 25% off</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 bg-luxury-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-check text-luxury-400 text-xs"></i>
+                                    </div>
+                                    <span class="text-premium-300 text-xs">Free celebration planning guides</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="py-32 bg-premium-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-luxury-400/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-40 h-40 bg-luxury-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-luxury-300/40 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center glass-morphism border border-luxury-400/30 px-8 py-4 rounded-full mb-8 shadow-lg">
+                    <div class="w-3 h-3 bg-luxury-500 rounded-full animate-pulse mr-3"></div>
+                    <span class="text-luxury-300 font-bold text-sm tracking-wider uppercase">🎊 Limited Time Offers</span>
+                    <div class="w-3 h-3 bg-luxury-500 rounded-full animate-pulse ml-3"></div>
+                </div>
+                <h2 class="text-5xl lg:text-7xl font-playfair font-black text-white mb-6 leading-tight">
+                    Special <span class="premium-text">Celebration</span> Packages
+                </h2>
+                <p class="text-xl lg:text-2xl text-premium-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                    Create unforgettable moments with our expertly curated celebration experiences
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-luxury-500">
+                    <div class="flex items-center glass-morphism border border-luxury-400/30 px-4 py-2 rounded-full">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        <span>5-Star Rating</span>
+                    </div>
+                    <div class="flex items-center glass-morphism border border-luxury-400/30 px-4 py-2 rounded-full">
+                        <i class="fas fa-users text-luxury-400 mr-2"></i>
+                        <span>500+ Happy Customers</span>
+                    </div>
+                    <div class="flex items-center glass-morphism border border-luxury-400/30 px-4 py-2 rounded-full">
+                        <i class="fas fa-shield-alt text-luxury-400 mr-2"></i>
+                        <span>100% Satisfaction Guarantee</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-10">
+                <!-- Premium Birthday Package -->
+                <div class="modern-card rounded-3xl shadow-xl card-hover relative overflow-hidden border border-luxury-400/20 group">
+                    <!-- Hero Image -->
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="./bday.jpeg" 
+                             alt="Birthday celebration setup" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <div class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-4 py-2 rounded-full shadow-lg">
+                                <span class="text-sm font-bold">🎉 50% OFF</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-2xl font-playfair font-bold text-white mb-1">Birthday Bliss Package</h3>
+                            <p class="text-white/80 text-sm">For up to 50 guests</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-premium-300 text-sm">(4.9 • 156 reviews)</span>
+                        </div>
+                        
+                        <p class="text-premium-300 mb-6 leading-relaxed">Complete birthday celebration with custom cake, themed decorations, professional photography, and entertainment coordination.</p>
+                        
+                        <div class="glass-morphism border border-luxury-400/30 rounded-2xl p-4 mb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-premium-300">Package Value:</span>
+                                <span class="text-lg text-premium-400 line-through">₹59,900</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-semibold text-white">Special Price:</span>
+                                <span class="text-3xl font-bold text-luxury-400">₹29,900</span>
+                            </div>
+                        </div>
+
+                        <ul class="text-sm text-premium-300 mb-8 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Custom Birthday Cake</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Themed Decorations</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Professional Photography</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Entertainment Package</li>
+                        </ul>
+                        
+                        <button class="w-full bg-gradient-to-r from-luxury-600 to-luxury-500 text-white py-4 rounded-2xl hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 font-bold shadow-lg transform hover:scale-105">
+                            Book This Package
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Premium Wedding Package - Featured -->
+                <div class="modern-card rounded-3xl shadow-2xl card-hover relative overflow-hidden border-2 border-luxury-400/30 transform lg:scale-105 group">
+                    <!-- Popular Badge -->
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                        <div class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-6 py-2 rounded-full shadow-lg">
+                            <span class="text-sm font-bold">⭐ MOST POPULAR</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Hero Image -->
+                    <div class="h-56 relative overflow-hidden">
+                        <img src="./wedding.jpg" 
+                             alt="Elegant wedding celebration" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-4 py-2 rounded-full shadow-lg">
+                                <span class="text-sm font-bold">💍 70% OFF</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-3xl font-playfair font-bold text-white mb-1">Dream Wedding Package</h3>
+                            <p class="text-white/80 text-sm">For up to 100 guests • Full Service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="glass-morphism border border-luxury-400/30 text-luxury-300 px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</span>
+                        </div>
+                        <div class="text-premium-300 text-sm mb-4">(5.0 • 289 reviews)</div>
+                        
+                        <p class="text-premium-300 mb-6 leading-relaxed">Luxury wedding celebration with premium catering, floral arrangements, venue decoration, coordination team, and photography.</p>
+                        
+                        <div class="glass-morphism border border-luxury-400/30 rounded-2xl p-4 mb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-premium-300">Package Value:</span>
+                                <span class="text-lg text-premium-400 line-through">₹2,89,900</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-semibold text-white">Special Price:</span>
+                                <span class="text-3xl font-bold text-luxury-400">₹1,99,900</span>
+                            </div>
+                            <div class="text-center mt-2">
+                                <span class="text-xs text-luxury-400 font-semibold">💰 Save ₹90,000</span>
+                            </div>
+                        </div>
+
+                        <ul class="text-sm text-premium-300 mb-8 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Premium Catering Menu</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Floral Arrangements</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Professional Coordination</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Wedding Photography</li>
+                        </ul>
+                        
+                        <button class="w-full bg-gradient-to-r from-luxury-600 to-luxury-500 text-white py-4 rounded-2xl hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 font-bold shadow-lg transform hover:scale-105">
+                            Book This Package
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Corporate Excellence Package -->
+                <div class="modern-card rounded-3xl shadow-xl card-hover relative overflow-hidden border border-luxury-400/20 group">
+                    <!-- Hero Image -->
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="./coperative.jpg" 
+                             alt="Corporate event setup" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <div class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-4 py-2 rounded-full shadow-lg">
+                                <span class="text-sm font-bold">🏢 60% OFF</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-2xl font-playfair font-bold text-white mb-1">Corporate Excellence</h3>
+                            <p class="text-white/80 text-sm">For up to 75 guests</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-premium-300 text-sm">(4.8 • 89 reviews)</span>
+                        </div>
+                        
+                        <p class="text-premium-300 mb-6 leading-relaxed">Professional corporate event with gourmet catering, AV equipment, event management, networking setup, and branding coordination.</p>
+                        
+                        <div class="glass-morphism border border-luxury-400/30 rounded-2xl p-4 mb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-premium-300">Package Value:</span>
+                                <span class="text-lg text-premium-400 line-through">₹1,49,900</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-semibold text-white">Special Price:</span>
+                                <span class="text-3xl font-bold text-luxury-400">₹89,900</span>
+                            </div>
+                        </div>
+
+                        <ul class="text-sm text-premium-300 mb-8 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Gourmet Catering</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> AV Equipment Setup</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Event Management</li>
+                            <li class="flex items-center"><i class="fas fa-check text-luxury-400 mr-2"></i> Professional Branding</li>
+                        </ul>
+                        
+                        <button class="w-full bg-gradient-to-r from-luxury-600 to-luxury-500 text-white py-4 rounded-2xl hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 font-bold shadow-lg transform hover:scale-105">
+                            Book This Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Enhanced CTA Section -->
+            <div class="mt-20">
+                <div class="modern-card border border-luxury-400/30 rounded-3xl p-8 lg:p-12">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-6 py-3 rounded-full mb-6 shadow-lg">
+                            <i class="fas fa-fire mr-2 animate-bounce"></i>
+                            <span class="font-bold text-sm">⏰ Limited Time Offer - Ending Soon!</span>
+                        </div>
+                        <h3 class="text-3xl lg:text-4xl font-playfair font-bold text-white mb-4">
+                            Ready to Create Magic?
+                        </h3>
+                        <p class="text-lg text-premium-300 mb-8 max-w-2xl mx-auto">
+                            Join 500+ happy families who trusted us with their special moments. Book now and save up to 70%!
+                        </p>
+                    </div>
+                    
+                    <!-- Premium Trust Indicators -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 glass-morphism border border-luxury-400/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-medal text-luxury-400 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-white mb-1">Award Winning</h4>
+                            <p class="text-sm text-premium-300">Best Event Planner 2024</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 glass-morphism border border-luxury-400/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-heart text-luxury-400 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-white mb-1">100% Guarantee</h4>
+                            <p class="text-sm text-premium-300">Money back promise</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 glass-morphism border border-luxury-400/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-clock text-luxury-400 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-white mb-1">24/7 Support</h4>
+                            <p class="text-sm text-premium-300">Always here to help</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-white px-10 py-4 rounded-2xl font-bold hover:from-luxury-700 hover:to-luxury-600 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                            <i class="fas fa-phone mr-3"></i>
+                            Call Now: +91 98765 43210
+                        </button>
+                        <button class="glass-morphism border-2 border-luxury-400/30 text-luxury-300 px-10 py-4 rounded-2xl font-bold hover:border-luxury-400 hover:text-luxury-400 transition-all duration-300 shadow-lg">
+                            <i class="fas fa-whatsapp mr-3"></i>
+                            WhatsApp Quote
+                        </button>
+                    </div>
+                    
+                    <!-- Premium Urgency Counter -->
+                    <div class="text-center mt-6">
+                        <p class="text-sm text-luxury-500">
+                            <i class="fas fa-users mr-1"></i>
+                            <span class="font-semibold text-luxury-400">23 people</span> viewed these packages in the last hour
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="py-24 bg-premium-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 section-divider pt-8">
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold text-white mb-6">
+                    Client <span class="premium-text">Stories</span>
+                </h2>
+                <p class="text-lg text-premium-300 max-w-3xl mx-auto leading-relaxed">
+                    The joy of our clients is our greatest achievement. Here's what they say about their celebrations
+                </p>
+            </div>
+            
+            <!-- Featured Testimonial -->
+            <div class="mb-16">
+                <div class="modern-card rounded-3xl p-12 text-center max-w-4xl mx-auto">
+                    <div class="mb-8">
+                        
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mb-6 text-2xl mx-auto" >
+                            A
+                        </div>
+                        <blockquote class="text-2xl lg:text-3xl font-playfair text-white leading-relaxed mb-6">
+                            "Celebration Corner made our engagement party magical. Perfect décor, music, and lighting made the night unforgettable."
+                        </blockquote>
+                        <div class="flex justify-center mb-4">
+                            <div class="flex text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-lg">Abin & Aleena </p>
+                            <p class="text-luxury-500">Wedding Reception • 180 Guests</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+                <!-- Review 1 -->
+                <div class="modern-card rounded-2xl p-8 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Akash</h4>
+                            <p class="text-sm text-luxury-500">Corporate Gala</p>
+                        </div>
+                    </div>
+                    <p class="text-premium-300 leading-relaxed mb-6">"Celebration Corner delivered a flawless corporate gala — every detail was handled with precision and style."</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-luxury-400">2 weeks ago</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="modern-card rounded-2xl p-8 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            G
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Gyathri</h4>
+                            <p class="text-sm text-luxury-500">25th Anniversary</p>
+                        </div>
+                    </div>
+                    <p class="text-premium-300 leading-relaxed mb-6">"They captured our love story beautifully. The intimate setting and thoughtful touches made our 25th anniversary unforgettable."</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-luxury-400">1 month ago</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="modern-card rounded-2xl p-8 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            D
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Alias John</h4>
+                            <p class="text-sm text-luxury-500">Birthday Celebration</p>
+                        </div>
+                    </div>
+                    <p class="text-premium-300 leading-relaxed mb-6">"My 50th birthday party was beyond my wildest dreams. The team's creativity and execution were simply outstanding."</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-luxury-400">3 weeks ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-16 text-center">
+                <div class="modern-card rounded-2xl p-8 inline-block">
+                    <div class="grid grid-cols-3 gap-8 divide-x divide-luxury-200">
+                        <div>
+                            <div class="text-3xl font-bold text-white mb-2">4.9/5</div>
+                            <div class="text-sm text-premium-300">Average Rating</div>
+                        </div>
+                        <div class="pl-8">
+                            <div class="text-3xl font-bold text-white mb-2">500+</div>
+                            <div class="text-sm text-premium-300">Happy Clients</div>
+                        </div>
+                        <div class="pl-8">
+                            <div class="text-3xl font-bold text-white mb-2">100%</div>
+                            <div class="text-sm text-premium-300">Satisfaction Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-premium-700 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 section-divider pt-8">
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold text-white mb-6">
+                    Our <span class="gradient-text">Story</span>
+                </h2>
+                <p class="text-lg text-premium-300 max-w-3xl mx-auto leading-relaxed">
+                    Born from a passion for creating extraordinary moments, we've been crafting unforgettable celebrations since 2020
+                </p>
+            </div>
+            
+            <!-- Main Story Section -->
+            <div class="mb-20">
+                <div class="modern-card rounded-3xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="h-80 lg:h-96 relative">
+                            <img src="./party.jpg" 
+                                 alt="Behind the scenes of event planning" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                    <span class="text-white text-sm font-medium">✨ Our Beginning</span>
+                                </div>
+                                <h3 class="text-3xl font-playfair font-bold text-white mb-2">Where Dreams Take Flight</h3>
+                                <p class="text-white/90 text-lg">Every great celebration starts with a vision</p>
+                            </div>
+                        </div>
+                        <div class="p-12 flex flex-col justify-center">
+                            <div class="mb-8">
+                                <h4 class="text-2xl font-playfair font-bold text-white mb-6">Crafting Moments That Matter</h4>
+                                <p class="text-premium-300 leading-relaxed mb-6">
+                                    Since 2020, Timeless Toast has been bringing dreams to life with unforgettable celebrations. We fuse creativity, flawless planning, and heartfelt details to craft events that truly reflect your story and create memories that last a lifetime.
+
+
+                                </p>
+                                <p class="text-premium-300 leading-relaxed mb-6">
+From an intimate dinner under the stars to a grand hall filled with music and light, we approach every event as a once-in-a-lifetime story waiting to be told. Your story. And we’re here to make sure it’s unforgettable.
+                                    
+                                </p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-blush-100 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                        <i class="fas fa-heart text-blush-600 text-xl"></i>
+                                    </div>
+                                    <p class="text-sm font-semibold text-white">Passion-Driven</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-blush-100 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                        <i class="fas fa-users text-blush-600 text-xl"></i>
+                                    </div>
+                                    <p class="text-sm font-semibold text-white">Client-Focused</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Modern Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <!-- Elegant Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-60 h-60 bg-luxury-400 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-luxury-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-luxury-300 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <!-- Premium decorative top border -->
+        <div class="h-1 bg-gradient-to-r from-luxury-500 via-luxury-400 to-luxury-500"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="pt-16 pb-8">
+                <div class="grid lg:grid-cols-12 gap-6 lg:gap-8">
+                    <!-- Brand Section - Compact -->
+                    <div class="lg:col-span-4">
+                        <div class="mb-6">
+                            <!-- Compact Logo -->
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-luxury-500 via-luxury-600 to-luxury-700 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                    <span class="text-white font-bold text-xl font-playfair">T</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-playfair font-bold text-white mb-1">Timeless Toast</h3>
+                                    <p class="text-luxury-300 text-sm font-medium">Luxury Celebration Specialists</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Compact Description -->
+                            <p class="text-gray-300 leading-relaxed mb-6 max-w-sm">
+                                Creating magical moments and unforgettable celebrations since 2020. Every event is a canvas for memories that last a lifetime.
+                            </p>
+                            
+                            <!-- Compact Stats -->
+                            <div class="grid grid-cols-3 gap-3 mb-6">
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-luxury-400 mb-1">500+</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Events</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-luxury-300 mb-1">5.0</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-luxury-400 mb-1">100%</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Satisfaction</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Compact Social Links -->
+                            <div class="flex space-x-2">
+                                <a href="#" class="w-10 h-10 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-luxury-600 transition-all duration-300 group border border-gray-700 hover:border-blush-500">
+                                    <i class="fab fa-facebook text-gray-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 transition-all duration-300 group border border-gray-700 hover:border-pink-500">
+                                    <i class="fab fa-instagram text-gray-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-green-500 transition-all duration-300 group border border-gray-700 hover:border-green-500">
+                                    <i class="fab fa-whatsapp text-gray-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-red-600 transition-all duration-300 group border border-gray-700 hover:border-red-500">
+                                    <i class="fab fa-youtube text-gray-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="lg:col-span-2">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Quick Links</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-blush-500 to-cream-500"></div>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-300 hover:text-blush-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blush-400"></i>
+                                <span>Our Story</span>
+                            </a></li>
+                            <li><a href="#stores" class="text-gray-300 hover:text-blush-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blush-400"></i>
+                                <span>Services</span>
+                            </a></li>
+                            <li><a href="#gallery" class="text-gray-300 hover:text-blush-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blush-400"></i>
+                                <span>Portfolio</span>
+                            </a></li>
+                            <li><a href="#events" class="text-gray-300 hover:text-blush-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blush-400"></i>
+                                <span>Event Planning</span>
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="lg:col-span-2">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Our Services</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-blush-500 to-cream-500"></div>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Wedding Planning</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Birthday Parties</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Corporate Events</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Anniversary Events</span>
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-4">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Get In Touch</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-blush-500 to-cream-500"></div>
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-map-marker-alt text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 font-medium text-sm">Visit Our Studio</p>
+                                    <p class="text-gray-400 text-xs">kottayam, Kerala 686531</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-phone text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <a href="tel:+919876543210" class="text-gray-300 hover:text-blush-400 transition-colors font-medium block text-sm">
+                                        +91 98765 43210
+                                    </a>
+                                    <p class="text-gray-400 text-xs">24/7 serrvice</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-envelope text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <a href="mailto:hello@timelesstoast.com" class="text-gray-300 hover:text-blush-400 transition-colors font-medium block text-sm">
+                                        powerboys@gmai.com
+                                    </a>
+                                    <p class="text-gray-400 text-xs">Quick Response Guaranteed</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-clock text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 font-medium text-sm">Office Hours</p>
+                                    <p class="text-gray-400 text-xs">Mon-Fri: 9AM-7PM • Sat-Sun: 10AM-6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compact Footer Bottom -->
+            <div class="border-t border-gray-700/50 backdrop-blur-sm">
+                <div class="py-6">
+                    <div class="flex flex-col lg:flex-row justify-between items-center space-y-3 lg:space-y-0">
+                        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <p class="text-gray-400 text-sm">
+                                &copy; 2025 Timeless Toast. Crafted with ❤️ for celebrations.
+                            </p>
+                            <div class="flex items-center space-x-2 text-xs text-gray-500">
+                                <span>Made in</span>
+                                <span class="text-orange-500">🇮🇳</span>
+                                <span>India</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap items-center justify-center gap-4">
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Privacy Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Terms of Service</a>
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Cookie Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

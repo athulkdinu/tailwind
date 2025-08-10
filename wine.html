@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wines & Beverages - Timeless Toast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'premium': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'luxury': {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
+                        },
+                        'platinum': {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            300: '#d4d4d8',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b',
+                        },
+                        'gold': {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: 
+                linear-gradient(135deg, rgba(254, 247, 240, 0.95) 0%, rgba(253, 238, 225, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-morphism {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modern-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.9));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        }
+        
+        .premium-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .luxury-gradient {
+            background: linear-gradient(135deg, #713f12 0%, #a16207 50%, #eab308 100%);
+        }
+        
+        .premium-text {
+            background: linear-gradient(135deg, #eab308 0%, #fde047 50%, #facc15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-divider {
+            position: relative;
+        }
+        
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f18965, #ee7046);
+            border-radius: 2px;
+        }
+        
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .asymmetric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .stagger-animation > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: staggerIn 0.8s ease-out forwards;
+        }
+        
+        .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+        .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+        .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+        .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes staggerIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-16px) scale(1.02);
+            box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ee7046, #f18965, #d85a2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .image-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        
+        .scroll-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .confetti-bg {
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(244, 162, 132, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(241, 137, 101, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(245, 225, 195, 0.4) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-inter bg-premium-900">
+    <!-- Premium Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-gradient-to-r from-amber-900/95 to-yellow-800/95 backdrop-blur-md border-b border-amber-400/20 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-amber-900 font-bold text-lg">T</span>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-playfair font-bold text-white">Timeless Toast</h1>
+                            <p class="text-xs text-amber-300 -mt-1">Premium Wines</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-amber-200 hover:text-amber-400 transition-all duration-300 font-medium relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#stores" class="text-amber-200 hover:text-amber-400 transition-all duration-300 font-medium relative group">
+                        Services
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#events" class="text-amber-200 hover:text-amber-400 transition-all duration-300 font-medium relative group">
+                        Events
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#gallery" class="text-amber-200 hover:text-amber-400 transition-all duration-300 font-medium relative group">
+                        Gallery
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#about" class="text-amber-200 hover:text-amber-400 transition-all duration-300 font-medium relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center text-amber-200 text-sm">
+                        <i class="fas fa-phone mr-2 text-amber-400"></i>
+                        <span class="font-medium">+91 9876543210</span>
+                    </div>
+                    <button class="bg-gradient-to-r from-amber-600 to-yellow-500 text-amber-900 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300 font-bold text-sm">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative bg-black w-full min-h-screen pt-24">
+        <div class="absolute w-full lg:w-1/2 h-full bg-white top-0 left-0 z-10 m-2 lg:m-5 p-4 lg:p-8">
+            <h1 class="mt-8 lg:mt-16 mx-4 lg:mx-20 text-3xl lg:text-6xl font-bold leading-tight">Each toast holds memories rather than the alcohol</h1>
+            <p class="py-6 lg:py-10 px-4 lg:px-20 font-semibold text-sm lg:text-base leading-relaxed">Raise a glass to life's special moments with the timeless elegance of
+                champagne. Crafted with passion in the heart of France, each bottle brings joy, celebration, and stories
+                that linger long after the last sip.From intimate gatherings to grand festivities, our curated selection of
+                champagnes elevates every occasion. Discover the perfect blend to mark your milestones and create
+                unforgettable experiences.</p>
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 px-4 lg:px-20">
+                <div class="w-full lg:w-auto">
+                    <button class="w-full lg:w-40 h-12 lg:h-14 text-lg bg-black rounded-full text-white font-semibold hover:bg-stone-700 transition-colors">
+                        Make plans
+                    </button>
+                </div>
+                <div class="w-full lg:w-auto">
+                    <button class="w-full lg:w-48 h-12 lg:h-14 text-lg bg-black rounded-full text-white font-semibold hover:bg-stone-700 transition-colors">
+                        Explore Champagne
+                    </button>
+            </div>
+            </div>
+        </div>
+        <div class="absolute w-full lg:w-1/2 h-full bg-black top-0 right-0 z-10 m-2 lg:m-5 p-4 lg:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 h-full">
+                <div class="box-border border-4 border-white p-2 lg:p-4 h-32 lg:h-48 bg-[url('https://i.pinimg.com/1200x/7e/53/8b/7e538b9ecb5ea0388f38ece290735a0a.jpg')] bg-cover bg-center rounded-lg">
+                </div>
+                <div class="box-border border-4 border-white h-32 lg:h-48 bg-[url('https://i.pinimg.com/736x/d0/8a/97/d08a978919a17058136fdcc21c134394.jpg')] bg-cover bg-center rounded-lg">
+            </div>
+                <div class="box-border border-4 border-white h-32 lg:h-48 bg-[url('https://i.pinimg.com/736x/a1/d1/0c/a1d10c36f441c07d4891326e7447d05e.jpg')] bg-cover bg-center rounded-lg">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Champagnes Section -->
+    <section class="relative bg-white w-full py-8 lg:py-16 pb-32">
+        <h1 class="text-4xl lg:text-7xl font-extrabold text-center text-black px-4 lg:px-8 mb-8 lg:mb-16">Popular Champagnes</h1>
+        
+        <!-- Champagne Cards Container -->
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 space-y-6 lg:space-y-8">
+            
+            <!-- 1. Dom Pérignon -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Dom Pérignon Vintage 2013</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Chardonnay, Pinot Noir</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 22,500</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 20,999</p>
+                                </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/734eb6ce029dc6a9db182491f6f0ee7c.jpg" alt="Dom Pérignon Vintage 2013" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Dom Pérignon Vintage 2013</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">A harmonious blend of Chardonnay and Pinot Noir, this vintage champagne offers
+                            vibrant notes of white flowers, citrus, and stone fruits, with a creamy texture and refined
+                            bubbles. Perfect for celebrations or sophisticated pairings.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Moët & Chandon -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Moët & Chandon Brut Impérial NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Pinot , Chardonnay, Pinot Meunier</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 6,800</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 5,999</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/7a224dba36af8c201c7b734bc1c7ad82.jpg" alt="Moët & Chandon Brut Impérial NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Moët & Chandon Brut Impérial NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">This iconic champagne combines richness with elegance, featuring bright apple,
+                            pear, and citrus notes, balanced by fine bubbles and a crisp finish. Ideal for any occasion,
+                            from casual toasts to grand events.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Veuve Clicquot -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Veuve Clicquot Yellow Label Brut NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Pinot Noir, Chardonnay, Pinot Meunier</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 7,500</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 6,799</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/bd4fb4698802f90a7b09d6ceb1d8d058.jpg" alt="Veuve Clicquot Yellow Label Brut NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Veuve Clicquot Yellow Label Brut NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">Renowned for its bold structure, this champagne delivers flavors of ripe fruit,
+                            brioche, and vanilla, with a lively mousse and a lingering finish. Perfect for festive
+                            gatherings or gifting.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Krug Grande Cuvée -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Krug Grande Cuvée Brut NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Pinot Noir, Chardonnay, Pinot Meunier</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 25,000</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 23,499</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/ca000ece0989c50e3e2e2b83e3c5a5f1.jpg" alt="Krug Grande Cuvée Brut NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Krug Grande Cuvée Brut NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">A masterpiece of blending, this champagne offers a complex bouquet of toasted
+                            nuts, citrus zest, and honey, with exceptional depth and a silky texture. Ideal for
+                            connoisseurs seeking luxury.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Bollinger Special Cuvée -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Bollinger Special Cuvée NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Pinot Noir, Chardonnay, Pinot Meunier</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 8,200</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 7,499</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/1.jpg" alt="Bollinger Special Cuvée NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Bollinger Special Cuvée NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">Known for its robust character, this champagne boasts rich apple, spice, and
+                            brioche flavors, with a creamy palate and fine bubbles. A favorite for its bold, elegant
+                            style.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Ruinart Blanc de Blancs -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Ruinart Blanc de Blancs Brut NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Chardonnay</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 9,000</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 8,299</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/2.jpg" alt="Ruinart Blanc de Blancs NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Ruinart Blanc de Blancs NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">Crafted entirely from Chardonnay, this champagne shines with bright citrus,
+                            white peach, and floral notes, offering a fresh and elegant palate with a smooth finish.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Taittinger Brut Réserve -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Taittinger Brut Réserve NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Chardonnay, Pinot Noir, Pinot Meunier</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 6,500</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 5,799</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/3.jpg" alt="Taittinger Brut Réserve NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Taittinger Brut Réserve NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">A refined champagne with delicate bubbles, showcasing crisp apple, lemon zest,
+                            and brioche aromas. Its balanced elegance makes it a versatile choice for any occasion.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Louis Roederer Cristal -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Louis Roederer Cristal 2014</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Chardonnay, Pinot Noir</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 28,000</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 26,499</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/4.jpg" alt="Louis Roederer Cristal 2014" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Louis Roederer Cristal 2014</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">A prestigious champagne with intense minerality, offering notes of white
+                            flowers, citrus, and toasted almonds. Its silky texture and precise balance make it a true
+                            luxury.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Laurent-Perrier Cuvée Rosé -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Laurent-Perrier Cuvée Rosé NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Pinot Noir</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Rosé Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 10,500</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 9,799</p>
+        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/5.jpg" alt="Laurent-Perrier Cuvée Rosé NV" class="max-w-full h-auto max-h-80 object-contain">
+                </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Laurent-Perrier Cuvée Rosé NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">This vibrant rosé champagne bursts with red berry flavors, complemented by a
+                            fresh and crisp palate. Its stunning pink hue and lively bubbles make it a festive favorite.
+                        </p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Perrier-Jouët Grand Brut -->
+            <div class="bg-black rounded-xl p-4 lg:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 text-white">
+                    <div class="space-y-4">
+                        <h2 class="text-xl lg:text-2xl font-bold">Perrier-Jouët Grand Brut NV</h2>
+                        <div class="space-y-2 text-sm lg:text-base">
+                            <p class="font-semibold">🍇Chardonnay, Pinot Noir, Pinot Meunier</p>
+                            <p class="font-semibold">France 🇫🇷</p>
+                            <p class="font-semibold">🥂Champagne</p>
+                            <p class="font-semibold">MRP <s>₹ 7,000</s></p>
+                            <p class="font-semibold text-lg">Our Price ₹ 6,299</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+                            <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                            <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="./media/6.jpg" alt="Perrier-Jouët Grand Brut NV" class="max-w-full h-auto max-h-80 object-contain">
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl lg:text-4xl font-semibold">Perrier-Jouët Grand Brut NV</h2>
+                        <p class="text-sm lg:text-base leading-relaxed">Elegant and floral, this champagne offers delicate notes of white flowers,
+                            peach, and citrus, with a harmonious balance and fine bubbles. Perfect for sophisticated
+                            gatherings.</p>
+                        <button class="w-full lg:w-auto px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            Customise
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="bg-gradient-to-br from-amber-900 via-yellow-800 to-amber-900 text-white relative overflow-hidden">
+        <!-- Elegant Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-60 h-60 bg-amber-400 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-yellow-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-amber-300 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <!-- Premium decorative top border -->
+        <div class="h-1 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="pt-16 pb-8">
+                <div class="grid lg:grid-cols-12 gap-6 lg:gap-8">
+                    <!-- Brand Section - Compact -->
+                    <div class="lg:col-span-4">
+                        <div class="mb-6">
+                            <!-- Compact Logo -->
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-amber-500 via-yellow-600 to-amber-700 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                    <span class="text-white font-bold text-xl font-playfair">T</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-playfair font-bold text-white mb-1">Timeless Toast</h3>
+                                    <p class="text-amber-300 text-sm font-medium">Premium Wine Specialists</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Compact Description -->
+                            <p class="text-gray-300 leading-relaxed mb-6 max-w-sm">
+                                Creating magical moments and unforgettable celebrations since 2020. Every event is a canvas for memories that last a lifetime.
+                            </p>
+                            
+                            <!-- Compact Stats -->
+                            <div class="grid grid-cols-3 gap-3 mb-6">
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-amber-400 mb-1">500+</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Events</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-yellow-300 mb-1">5.0</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-amber-400 mb-1">100%</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Satisfaction</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Compact Social Links -->
+                            <div class="flex space-x-2">
+                                <a href="#" class="w-10 h-10 bg-amber-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-amber-600 transition-all duration-300 group border border-amber-700 hover:border-amber-500">
+                                    <i class="fab fa-facebook text-amber-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-amber-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 transition-all duration-300 group border border-amber-700 hover:border-pink-500">
+                                    <i class="fab fa-instagram text-amber-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-amber-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-green-500 transition-all duration-300 group border border-amber-700 hover:border-green-500">
+                                    <i class="fab fa-whatsapp text-amber-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-amber-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-red-600 transition-all duration-300 group border border-amber-700 hover:border-red-500">
+                                    <i class="fab fa-youtube text-amber-400 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="lg:col-span-2">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Quick Links</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-amber-500 to-yellow-500"></div>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html#about" class="text-gray-300 hover:text-amber-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-amber-400"></i>
+                                <span>Our Story</span>
+                            </a></li>
+                            <li><a href="index.html#stores" class="text-gray-300 hover:text-amber-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-amber-400"></i>
+                                <span>Services</span>
+                            </a></li>
+                            <li><a href="index.html#gallery" class="text-gray-300 hover:text-amber-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-amber-400"></i>
+                                <span>Portfolio</span>
+                            </a></li>
+                            <li><a href="index.html#events" class="text-gray-300 hover:text-amber-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-amber-400"></i>
+                                <span>Event Planning</span>
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="lg:col-span-2">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Our Services</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-blush-500 to-cream-500"></div>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Wedding Planning</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Birthday Parties</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Corporate Events</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-cream-400 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-cream-400"></i>
+                                <span>Anniversary Events</span>
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-4">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Get In Touch</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-blush-500 to-cream-500"></div>
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-map-marker-alt text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 font-medium text-sm">Visit Our Studio</p>
+                                    <p class="text-gray-400 text-xs">kottayam, Kerala 686531</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-phone text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <a href="tel:+919876543210" class="text-gray-300 hover:text-blush-400 transition-colors font-medium block text-sm">
+                                        +91 98765 43210
+                                    </a>
+                                    <p class="text-gray-400 text-xs">24/7 serrvice</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-envelope text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <a href="mailto:hello@timelesstoast.com" class="text-gray-300 hover:text-blush-400 transition-colors font-medium block text-sm">
+                                        powerboys@gmai.com
+                                    </a>
+                                    <p class="text-gray-400 text-xs">Quick Response Guaranteed</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3 group">
+                                <div class="w-8 h-8 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-700 group-hover:border-blush-500 transition-colors">
+                                    <i class="fas fa-clock text-blush-400 text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 font-medium text-sm">Office Hours</p>
+                                    <p class="text-gray-400 text-xs">Mon-Fri: 9AM-7PM • Sat-Sun: 10AM-6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compact Footer Bottom -->
+            <div class="border-t border-gray-700/50 backdrop-blur-sm">
+                <div class="py-6">
+                    <div class="flex flex-col lg:flex-row justify-between items-center space-y-3 lg:space-y-0">
+                        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <p class="text-gray-400 text-sm">
+                                &copy; 2025 Timeless Toast. Crafted with ❤️ for celebrations.
+                            </p>
+                            <div class="flex items-center space-x-2 text-xs text-gray-500">
+                                <span>Made in</span>
+                                <span class="text-orange-500">🇮🇳</span>
+                                <span>India</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap items-center justify-center gap-4">
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Privacy Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Terms of Service</a>
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Cookie Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-blush-400 transition-colors text-xs hover:underline">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
