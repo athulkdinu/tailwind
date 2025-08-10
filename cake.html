@@ -25,58 +25,139 @@
             }
         </style>
 
-<body class="  font-playfair" style="background-color: rgb(255, 248, 248);">
-    <section class="relative bg-black w-full h-screen">
-        <div class="absolute w-1/2 h-full   top-0 left-0  m-5" style="background-color: rgb(255, 248, 248);">
-            <h1 class="mt-35 mx-20 text-6xl font-bold">Every cake tells a story of sweetness</h1>
-            <p class="py-10 px-20 font-semibold">Indulge in the artistry of our handcrafted cakes, baked with love in our
-                family-owned bakery. Each cake is a masterpiece, blending rich flavors and delicate textures to make your
-                celebrations unforgettable. From intimate gatherings to grand festivities, our curated selection of cakes
-                elevates every occasion. Discover the perfect treat to sweeten your milestones and create cherished
-                memories.</p>
-            <div class="w-35 h-13 text-lg bg-black rounded-full ms-20 fw-6 ">
-                <h1
-                    class="text-white text-center align-middle p-2 font-semibold hover:bg-stone-700 rounded-full h-13 shadow">
-                    Order Now</h1>
+<body class="font-playfair" style="background-color: rgb(255, 248, 248);">
+    <!-- Premium Navigation (Cake) -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-gradient-to-r from-pink-700/95 to-rose-600/95 backdrop-blur-md border-b border-rose-300/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <div>
+                            <h1 class="text-xl sm:text-2xl font-bold text-white">Timeless Toast</h1>
+                            <p class="text-xs text-rose-200 -mt-1">Premium Cakes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-rose-100 hover:text-white transition-all duration-300 font-medium relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-200 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="event.html" class="text-rose-100 hover:text-white transition-all duration-300 font-medium relative group">
+                        Events
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-200 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="gift.html#gifts" class="text-rose-100 hover:text-white transition-all duration-300 font-medium relative group">
+                        Gifts
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-200 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="wine.html#home" class="text-rose-100 hover:text-white transition-all duration-300 font-medium relative group">
+                        Wines
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-200 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="cake.html" class="text-white font-semibold relative group">
+                        Cakes
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-white"></span>
+                    </a>
+                    <a href="index.html#gallery" class="text-rose-100 hover:text-white transition-all duration-300 font-medium relative group">
+                        Gallery
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-200 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#about" class="text-rose-100 hover:text-white transition-all duration-300 font-medium relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-200 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center text-rose-100 text-sm">
+                        <i class="fas fa-phone mr-2 text-rose-200"></i>
+                        <span class="font-medium">+91 9876543210</span>
+                    </div>
+                    <button class="bg-gradient-to-r from-rose-300 to-pink-200 text-rose-800 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg hover:shadow-rose-300/30 transition-all duration-300 font-bold text-sm">
+                        Get Quote
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="lg:hidden text-white hover:text-rose-200 transition-colors" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
-            <div class="w-54 h-13 text-lg bg-white rounded-full ms-80  fw-6" style="margin-top: -51px;">
-                <h1
-                    class="text-black text-center align-middle p-2 font-semibold  rounded-full h-13 shadow">
-                    Explore Flavors</h1>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden bg-rose-900/90 rounded-lg mt-4 p-4 border border-rose-700/50" role="menu" aria-label="Mobile Navigation">
+                <div class="space-y-4">
+                    <a href="index.html#home" class="block text-rose-100 hover:text-white transition-colors py-2">Home</a>
+                    <a href="event.html" class="block text-rose-100 hover:text-white transition-colors py-2">Events</a>
+                    <a href="gift.html#gifts" class="block text-rose-100 hover:text-white transition-colors py-2">Gifts</a>
+                    <a href="wine.html#home" class="block text-rose-100 hover:text-white transition-colors py-2">Wines</a>
+                    <a href="cake.html" class="block text-white font-semibold transition-colors py-2">Cakes</a>
+                    <a href="index.html#gallery" class="block text-rose-100 hover:text-white transition-colors py-2">Gallery</a>
+                    <a href="index.html#about" class="block text-rose-100 hover:text-white transition-colors py-2">About</a>
+                    <div class="pt-2 border-t border-rose-700/60">
+                        <div class="flex items-center text-rose-100 text-sm py-2">
+                            <i class="fas fa-phone mr-2 text-rose-200"></i>
+                            <span class="font-medium">+91 9876543210</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="absolute w-1/2 h-full  top-0 right-0  m-5" style="background-color: rgb(255, 248, 248);">
-            <div class="mt-20"> <img src="./media/c1.jpg" alt="Delicious Cake"> </div>
+    </nav>
 
+    <!-- Spacer for fixed header -->
+    <div class="pt-20"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative w-full min-h-[70vh]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 px-4 lg:px-8 py-8 lg:py-14">
+            <div class="bg-[rgb(255,248,248)] rounded-xl p-6 lg:p-10">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">Every cake tells a story of sweetness</h1>
+                <p class="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg font-semibold text-gray-700">Indulge in the artistry of our handcrafted cakes, baked with love in our family-owned bakery. Each cake is a masterpiece, blending rich flavors and delicate textures to make your celebrations unforgettable. From intimate gatherings to grand festivities, our curated selection of cakes elevates every occasion. Discover the perfect treat to sweeten your milestones and create cherished memories.</p>
+                <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <button class="w-full sm:w-auto px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-stone-700 transition">Order Now</button>
+                    <button class="w-full sm:w-auto px-6 py-3 bg-white text-black rounded-full font-semibold border border-gray-300 hover:bg-gray-100 transition">Explore Flavors</button>
+                </div>
+            </div>
+            <div class="bg-[rgb(255,248,248)] rounded-xl p-4 flex items-center justify-center">
+                <img src="./media/c1.jpg" alt="Delicious Cake" class="w-full max-w-xl h-auto rounded-lg shadow" />
+            </div>
         </div>
 
-        <div class="absolute w-300  grid grid-cols-3 gap-8 mt-170 ms-60 mt-30">
-
-            <a href="#choco1">
-                <div class="grid grid-cols-2 gap-4 border border-gray-300 rounded-lg p-3 bg-white shadow" >
-                    <div><img class="border-radius-5" src="./media/c3.jpg" width="110px" height="150px" alt="Belgian Chocolate Cake"></div>
-                    <div class="text-center text-lg font-bold mt-10">Belgian Chocolate </div>
-                </div>
-            </a>
-            <a href="#choco2">
-                <div class="grid grid-cols-2 gap-4 border border-gray-300 rounded-lg p-3 bg-white shadow">
-                    <div><img class="border-radius-5" src="./media/c4.jpg" width="110px" height="150px"
-                            alt="Royal Fruit Cake"></div>
-                    <div class="text-center text-lg font-bold mt-10">Royal Fruit Cake </div>
-                </div>
-            </a>
-            <a href="#choco3">
-                <div class="grid grid-cols-2 gap-4 border border-gray-300 rounded-lg p-3 bg-white shadow">
-                    <div><img class="border-radius-5" src="./media/c5.jpg" width="110px" height="150px" alt="Chocolate Bundt Cake"></div>
-                    <div class="text-center text-lg font-bold mt-10">Chocolate Bundt Cake </div>
-                </div>
-            </a>
+        <!-- Quick Links -->
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 -mt-2 lg:-mt-6 pb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="#choco1" class="block">
+                    <div class="grid grid-cols-2 gap-4 border border-gray-200 rounded-lg p-3 bg-white shadow hover:shadow-md transition">
+                        <div><img class="rounded-md object-cover" src="./media/c3.jpg" width="110" height="150" alt="Belgian Chocolate Cake"></div>
+                        <div class="text-center text-base sm:text-lg font-bold self-center">Belgian Chocolate</div>
+                    </div>
+                </a>
+                <a href="#choco2" class="block">
+                    <div class="grid grid-cols-2 gap-4 border border-gray-200 rounded-lg p-3 bg-white shadow hover:shadow-md transition">
+                        <div><img class="rounded-md object-cover" src="./media/c4.jpg" width="110" height="150" alt="Royal Fruit Cake"></div>
+                        <div class="text-center text-base sm:text-lg font-bold self-center">Royal Fruit Cake</div>
+                    </div>
+                </a>
+                <a href="#choco3" class="block">
+                    <div class="grid grid-cols-2 gap-4 border border-gray-200 rounded-lg p-3 bg-white shadow hover:shadow-md transition">
+                        <div><img class="rounded-md object-cover" src="./media/c5.jpg" width="110" height="150" alt="Chocolate Bundt Cake"></div>
+                        <div class="text-center text-base sm:text-lg font-bold self-center">Chocolate Bundt Cake</div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
-    <section class="mt-20 mb-20">
-        <h1 class="text-center text-4xl font-bold">Our Signature Cakes</h1>
-        <h1 id="choco1" class="ms-19 text-2xl font-bold mt-10">Chocolate Cakes</h1>
-        <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
+    <section class="mt-16 mb-16">
+        <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-center text-3xl sm:text-4xl font-bold">Our Signature Cakes</h1>
+        <h2 id="choco1" class="text-left text-2xl font-bold mt-10">Chocolate Cakes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div
                 class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
                 <img class="rounded-xl shadow-md object-cover" src="./media/c6.jpg" width="160" height="200"
@@ -218,8 +299,8 @@
                 </div>
             </div>
         </div>
-        <h1 id="choco2" class="ms-19 text-2xl font-bold mt-10">Royal Cakes</h1>
-        <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
+        <h2 id="choco2" class="text-left text-2xl font-bold mt-12">Royal Cakes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div
                 class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
                 <img class="rounded-xl shadow-md object-cover" src="./media/c10.jpg" width="160" height="200"
@@ -361,8 +442,8 @@
                 </div>
             </div>
         </div>
-        <h1 id="choco3" class="ms-19 text-2xl font-bold mt-10">Bundt Cakes</h1>
-        <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
+        <h2 id="choco3" class="text-left text-2xl font-bold mt-12">Bundt Cakes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div
                 class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
                 <img class="rounded-xl shadow-md object-cover" src="./media/c14.jpg" width="160" height="200"
@@ -504,8 +585,8 @@
                 </div>
             </div>
         </div>
-        <h1 class="ms-19 text-2xl font-bold mt-10">German Chocolate Cakes</h1>
-        <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
+        <h2 class="text-left text-2xl font-bold mt-12">German Chocolate Cakes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div
                 class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200 ">
                 <img class="rounded-xl shadow-md object-cover" src="./media/c11.jpg" width="160" height="200"
@@ -647,7 +728,178 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
+    <!-- Modern Footer (Cake) -->
+    <footer class="bg-gradient-to-br from-rose-950 via-pink-900 to-rose-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-60 h-60 bg-rose-400 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-pink-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-rose-300 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        <div class="h-1 bg-gradient-to-r from-rose-400 via-pink-300 to-rose-400"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="pt-16 pb-8">
+                <div class="grid lg:grid-cols-12 gap-6 lg:gap-8">
+                    <div class="lg:col-span-4">
+                        <div class="mb-6">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-rose-500 via-pink-600 to-rose-700 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                    <span class="text-white font-bold text-xl">T</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-1">Timeless Toast</h3>
+                                    <p class="text-rose-300 text-sm font-medium">Premium Cake Specialists</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed mb-6 max-w-sm">Crafting delightful cakes for unforgettable celebrations since 2020. Every slice is made to create memories that last a lifetime.</p>
+                            <div class="grid grid-cols-3 gap-3 mb-6">
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-rose-300 mb-1">200+</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Cakes</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-rose-200 mb-1">5.0</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-bold text-rose-300 mb-1">100%</div>
+                                    <div class="text-xs text-gray-400 uppercase tracking-wide">Satisfaction</div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <a href="#" class="w-10 h-10 bg-rose-800/40 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-rose-600 transition-all duration-300 group border border-rose-700 hover:border-rose-400">
+                                    <i class="fab fa-facebook text-rose-200 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-rose-800/40 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 transition-all duration-300 group border border-rose-700 hover:border-pink-400">
+                                    <i class="fab fa-instagram text-rose-200 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-rose-800/40 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-green-500 transition-all duration-300 group border border-rose-700 hover:border-green-400">
+                                    <i class="fab fa-whatsapp text-rose-200 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-rose-800/40 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-red-600 transition-all duration-300 group border border-rose-700 hover:border-red-400">
+                                    <i class="fab fa-youtube text-rose-200 group-hover:text-white transition-colors text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Quick Links</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-rose-400 to-pink-300"></div>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html#about" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Our Story</span></a></li>
+                            <li><a href="gift.html#gifts" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Gift Collections</span></a></li>
+                            <li><a href="event.html#events" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Events</span></a></li>
+                            <li><a href="index.html#gallery" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Gallery</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Our Services</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-rose-400 to-pink-300"></div>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Custom Cakes</span></a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Party Packages</span></a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Express Delivery</span></a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-rose-300 transition-all duration-300 flex items-center group hover:translate-x-1 text-sm"><i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-300"></i><span>Gift Wrapping</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <h4 class="font-bold mb-4 text-white relative">
+                            <span class="relative z-10">Get In Touch</span>
+                            <div class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-rose-400 to-pink-300"></div>
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3 group">
+                                <div class="w-8 h-8 bg-rose-800/40 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-rose-700 group-hover:border-rose-400 transition-colors"><i class="fas fa-map-marker-alt text-rose-300 text-xs"></i></div>
+                                <div>
+                                    <p class="text-gray-300 font-medium text-sm">Visit Our Studio</p>
+                                    <p class="text-gray-400 text-xs">Kottayam, Kerala 686531</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 group">
+                                <div class="w-8 h-8 bg-rose-800/40 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-rose-700 group-hover:border-rose-400 transition-colors"><i class="fas fa-phone text-rose-300 text-xs"></i></div>
+                                <div>
+                                    <a href="tel:+919876543210" class="text-gray-300 hover:text-rose-300 transition-colors font-medium block text-sm">+91 98765 43210</a>
+                                    <p class="text-gray-400 text-xs">24/7 service</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 group">
+                                <div class="w-8 h-8 bg-rose-800/40 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-rose-700 group-hover:border-rose-400 transition-colors"><i class="fas fa-envelope text-rose-300 text-xs"></i></div>
+                                <div>
+                                    <a href="mailto:hello@timelesstoast.com" class="text-gray-300 hover:text-rose-300 transition-colors font-medium block text-sm">powerboys@gmail.com</a>
+                                    <p class="text-gray-400 text-xs">Quick Response Guaranteed</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 group">
+                                <div class="w-8 h-8 bg-rose-800/40 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-rose-700 group-hover:border-rose-400 transition-colors"><i class="fas fa-clock text-rose-300 text-xs"></i></div>
+                                <div>
+                                    <p class="text-gray-300 font-medium text-sm">Office Hours</p>
+                                    <p class="text-gray-400 text-xs">Mon-Fri: 9AM-7PM • Sat-Sun: 10AM-6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-rose-800/50 backdrop-blur-sm">
+                <div class="py-6">
+                    <div class="flex flex-col lg:flex-row justify-between items-center space-y-3 lg:space-y-0">
+                        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <p class="text-gray-400 text-sm">&copy; 2025 Timeless Toast. Crafted with ❤️ for celebrations.</p>
+                            <div class="flex items-center space-x-2 text-xs text-gray-500"><span>Made in</span><span class="text-orange-500">🇮🇳</span><span>India</span></div>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-center gap-4">
+                            <a href="#" class="text-gray-400 hover:text-rose-300 transition-colors text-xs hover:underline">Privacy Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-rose-300 transition-colors text-xs hover:underline">Terms of Service</a>
+                            <a href="#" class="text-gray-400 hover:text-rose-300 transition-colors text-xs hover:underline">Cookie Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-rose-300 transition-colors text-xs hover:underline">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isOpen = !mobileMenu.classList.toggle('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.add('fa-solid');
+                        icon.classList.toggle('fa-bars', !isOpen);
+                        icon.classList.toggle('fa-xmark', isOpen);
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                            const icon = mobileMenuButton.querySelector('i');
+                            if (icon) {
+                                icon.classList.add('fa-solid');
+                                icon.classList.add('fa-bars');
+                                icon.classList.remove('fa-xmark');
+                            }
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
