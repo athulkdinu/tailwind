@@ -37,11 +37,13 @@
               <span class="text-white font-bold text-lg">T</span>
             </div>
             <div>
-              <h1 class="text-2xl font-bold text-white">Timeless Toast</h1>
+              <h1 class="text-xl sm:text-2xl font-bold text-white">Timeless Toast</h1>
               <p class="text-xs text-red-300 -mt-1">Premium Events</p>
             </div>
           </div>
         </div>
+        
+        <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center space-x-8">
           <a href="index.html" class="text-gray-300 hover:text-red-400 transition-all duration-300 font-medium relative group">
             Home
@@ -64,14 +66,37 @@
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all group-hover:w-full"></span>
           </a>
         </div>
+        
         <div class="flex items-center space-x-4">
           <div class="hidden md:flex items-center text-gray-300 text-sm">
             <i class="fas fa-phone mr-2 text-red-400"></i>
             <span class="font-medium">+91 9876543210</span>
           </div>
-          <button class="bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:shadow-red-500/30 transition-all duration-300 font-bold text-sm">
+          <button class="bg-gradient-to-r from-red-600 to-red-500 text-white px-4 sm:px-6 py-2 rounded-full hover:shadow-lg hover:shadow-red-500/30 transition-all duration-300 font-bold text-sm">
             Get Quote
           </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="lg:hidden text-white hover:text-red-400 transition-colors">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 rounded-lg mt-4 p-4">
+        <div class="space-y-4">
+          <a href="index.html" class="block text-gray-300 hover:text-red-400 transition-colors py-2">Home</a>
+          <a href="#services" class="block text-gray-300 hover:text-red-400 transition-colors py-2">Services</a>
+          <a href="#events" class="block text-gray-300 hover:text-red-400 transition-colors py-2">Events</a>
+          <a href="#gallery" class="block text-gray-300 hover:text-red-400 transition-colors py-2">Gallery</a>
+          <a href="#about" class="block text-gray-300 hover:text-red-400 transition-colors py-2">About</a>
+          <div class="pt-2 border-t border-gray-700">
+            <div class="flex items-center text-gray-300 text-sm py-2">
+              <i class="fas fa-phone mr-2 text-red-400"></i>
+              <span class="font-medium">+91 9876543210</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -84,12 +109,12 @@
     <div class="w-full md:h-screen h-96" style="background-color: rgba(0, 0, 0, 0.24);">
 
 
-      <div class="flex justify-center  flex-col text-white md:p-60 p-15 w-full">
-        <h1 class=" md:text-9xl text-6xl">Timeless Toast</h1>
-        <p class="mt-15 md:text-xl ">We make your event memorible for life time.We make best moments <br> of your life.
+      <div class="flex justify-center flex-col text-white px-4 sm:px-8 md:px-60 py-20 md:py-60 w-full">
+        <h1 class="text-4xl sm:text-6xl md:text-9xl font-bold text-center">Timeless Toast</h1>
+        <p class="mt-4 sm:mt-8 md:mt-15 text-lg sm:text-xl md:text-xl text-center max-w-4xl mx-auto">We make your event memorable for life time. We make best moments <br class="hidden sm:block"> of your life.
         </p>
-        <div class="mt-10">
-          <button class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
+        <div class="mt-6 sm:mt-8 md:mt-10 text-center">
+          <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-red-600 transition text-sm sm:text-base">
            <a href="./appoint.html"> Make Appointment</a>
           </button>
         </div>
@@ -99,101 +124,101 @@
 
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 max-w-6xl mx-auto items-center">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-8 max-w-6xl mx-auto items-center">
     <div class="flex justify-center">
       <img src="https://i.pinimg.com/474x/7e/6e/6d/7e6e6da3fbdf3375464ff067fc552810.jpg?nii=t" alt="Bouquet"
-        class="object-cover rounded-lg max-h-120">
+        class="object-cover rounded-lg w-full max-h-60 sm:max-h-80 md:max-h-120">
     </div>
 
     <div class="flex flex-col gap-4">
       <img
         src="https://images.squarespace-cdn.com/content/v1/51a9230fe4b0953aee4beec2/1468799723082-WP8WEPD1NOAP4WTPZ38U/DSC_0482.jpg"
-        alt="Beach setup" class="object-cover rounded-lg">
+        alt="Beach setup" class="object-cover rounded-lg w-full">
       <img src="https://i.pinimg.com/736x/f5/c0/a4/f5c0a4f937faad670c90bc92630bc01d.jpg" alt="Table decor"
-        class="object-cover rounded-lg max-h-60">
+        class="object-cover rounded-lg w-full max-h-40 sm:max-h-60">
     </div>
 
-    <div class="flex flex-col justify-center">
-      <h4 class="text-red-500 uppercase tracking-wide mb-2 font-bold">About Us</h4>
-      <h2 class="text-2xl font-semibold mb-4 leading-snug">
+    <div class="flex flex-col justify-center text-center md:text-left">
+      <h4 class="text-red-500 uppercase tracking-wide mb-2 font-bold text-sm sm:text-base">About Us</h4>
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 leading-snug">
         Best Memorable Day of Your Life
       </h2>
-      <p class="text-gray-400 mb-6">
+      <p class="text-gray-400 mb-6 text-sm sm:text-base">
         We create birthdays and intimate celebrations that feel like treasured memories in the making. From dreamy décor
         and artful details to exquisite flavors and joyful moments, every element is crafted with love. With over 13,000
         events brought to life, we ensure your special day is filled with beauty, laughter, and the kind of magic that
         lingers in the heart forever.
       </p>
-      <button class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
+      <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-red-600 transition text-sm sm:text-base">
         <a href="./appoint.html">Make Appointment</a>
       </button>
     </div>
   </div>
 
-  <div class="max-w-6xl mx-auto px-6 py-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
 
-    <div class="text-center mb-8">
-      <h2 class="text-2xl font-bold uppercase">Our Services</h2>
-      <div class="w-20 h-1 bg-red-500 mx-auto mt-2"></div>
+    <div class="text-center mb-6 sm:mb-8">
+      <h2 class="text-xl sm:text-2xl font-bold uppercase">Our Services</h2>
+      <div class="w-16 sm:w-20 h-1 bg-red-500 mx-auto mt-2"></div>
     </div>
 
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
       <div class="relative rounded-lg overflow-hidden shadow-lg">
         <img src="https://i.pinimg.com/736x/02/c5/e6/02c5e6e7cf92a66089da73772e050da6.jpg" alt="Destination Wedding"
-          class="w-full h-80 object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-4 py-3">
-          <h3 class="font-semibold text-gray-600">Birthday Event</h3>
-          <p class="text-sm text-gray-600">We arrange events anywhere in the country.</p>
-          <a href="#" class="text-red-500 text-sm font-semibold mt-2 inline-block">Learn more</a>
+          class="w-full h-48 sm:h-80 object-cover">
+        <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-3 sm:px-4 py-2 sm:py-3">
+          <h3 class="font-semibold text-gray-600 text-sm sm:text-base">Birthday Event</h3>
+          <p class="text-xs sm:text-sm text-gray-600">We arrange events anywhere in the country.</p>
+          <a href="#" class="text-red-500 text-xs sm:text-sm font-semibold mt-1 sm:mt-2 inline-block">Learn more</a>
         </div>
       </div>
 
       <div class="relative rounded-lg overflow-hidden shadow-lg">
         <img
           src="https://www.jiomart.com/images/product/original/rv7mph7zp2/specialyou-maroon-and-black-birthday-decoration-kit-with-white-net-curtain-and-lights-73-items-product-images-orv7mph7zp2-p603211258-0-202307252321.jpg?im=Resize=(420,420)"
-          alt="Decoration Service" class="w-full h-80 object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-4 py-3">
-          <h3 class="font-semibold text-gray-600">Decoration Service</h3>
-          <p class="text-sm text-gray-600">We create unique and beautiful event decorations.</p>
-          <a href="#" class="text-red-500 text-sm font-semibold mt-2 inline-block">Learn more</a>
+          alt="Decoration Service" class="w-full h-48 sm:h-80 object-cover">
+        <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-3 sm:px-4 py-2 sm:py-3">
+          <h3 class="font-semibold text-gray-600 text-sm sm:text-base">Decoration Service</h3>
+          <p class="text-xs sm:text-sm text-gray-600">We create unique and beautiful event decorations.</p>
+          <a href="#" class="text-red-500 text-xs sm:text-sm font-semibold mt-1 sm:mt-2 inline-block">Learn more</a>
         </div>
       </div>
 
-      <div class="relative rounded-lg overflow-hidden shadow-lg">
+      <div class="relative rounded-lg overflow-hidden shadow-lg sm:col-span-2 lg:col-span-1">
         <img
           src="https://media.istockphoto.com/id/1473470276/photo/buffet-table-mini-cold-snacks-canapes-and-appetizers-for-public-catering-food-on-wooden.jpg?s=612x612&w=0&k=20&c=nRRcAjjY14ouzuPy-RL4kLEl849fbvugy9G1MbrCtvc="
-          alt="Catering Service" class="w-full h-80 object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-4 py-3">
-          <h3 class="font-semibold text-gray-600">Catering Service</h3>
-          <p class="text-sm text-gray-600">We provide catering for all event sizes and styles.</p>
-          <a href="#" class="text-red-500 text-sm font-semibold mt-2 inline-block">Learn more</a>
+          alt="Catering Service" class="w-full h-48 sm:h-80 object-cover">
+        <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-3 sm:px-4 py-2 sm:py-3">
+          <h3 class="font-semibold text-gray-600 text-sm sm:text-base">Catering Service</h3>
+          <p class="text-xs sm:text-sm text-gray-600">We provide catering for all event sizes and styles.</p>
+          <a href="#" class="text-red-500 text-xs sm:text-sm font-semibold mt-1 sm:mt-2 inline-block">Learn more</a>
         </div>
       </div>
 
     </div>
-    <div class="flex justify-center mt-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+    <div class="flex justify-center mt-6 sm:mt-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl w-full">
 
         <div class="relative rounded-lg overflow-hidden shadow-lg">
           <img src="https://i.pinimg.com/564x/f2/f2/e4/f2f2e41582283dcbed125d06095479e8.jpg" alt="Birthday Event"
-            class="w-full h-80 object-cover">
-          <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-4 py-3">
-            <h3 class="font-semibold text-gray-600">Venue Selection</h3>
-            <p class="text-sm text-gray-600">Pick a Suitable Location</p>
-            <a href="#" class="text-red-500 text-sm font-semibold mt-2 inline-block">Learn more</a>
+            class="w-full h-48 sm:h-80 object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-3 sm:px-4 py-2 sm:py-3">
+            <h3 class="font-semibold text-gray-600 text-sm sm:text-base">Venue Selection</h3>
+            <p class="text-xs sm:text-sm text-gray-600">Pick a Suitable Location</p>
+            <a href="#" class="text-red-500 text-xs sm:text-sm font-semibold mt-1 sm:mt-2 inline-block">Learn more</a>
           </div>
         </div>
 
         <div class="relative rounded-lg overflow-hidden shadow-lg">
           <img
             src="https://vorlane.com/wp-content/uploads/2024/11/9Concert-stage-setup-with-strategically-positioned-audio-and-lighting-equipment-for-optimal-sound-distribution-and-visibility.webp"
-            alt="Decoration Service" class="w-full h-80 object-cover">
-          <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-4 py-3">
-            <h3 class="font-semibold text-gray-600">Stage & Program Flow</h3>
-            <p class="text-sm text-gray-600">Keep speaker, Performers, and activities on time.</p>
-            <a href="#" class="text-red-500 text-sm font-semibold mt-2 inline-block">Learn more</a>
+            alt="Decoration Service" class="w-full h-48 sm:h-80 object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-white/90 px-3 sm:px-4 py-2 sm:py-3">
+            <h3 class="font-semibold text-gray-600 text-sm sm:text-base">Stage & Program Flow</h3>
+            <p class="text-xs sm:text-sm text-gray-600">Keep speaker, Performers, and activities on time.</p>
+            <a href="#" class="text-red-500 text-xs sm:text-sm font-semibold mt-1 sm:mt-2 inline-block">Learn more</a>
           </div>
         </div>
 
@@ -201,7 +226,7 @@
     </div>
 
     <button
-      class="bg-gray-700 text-white px-6 py-3 ml-115 mt-10 border-2 border-red rounded-lg hover:text-red-600 transition">
+      class="bg-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 mt-6 sm:mt-10 border-2 border-red rounded-lg hover:text-red-600 transition text-sm sm:text-base mx-auto block">
       See More Service
     </button>
 
@@ -233,112 +258,112 @@
 </div>
 
 <!-- Event Packages Section -->
-<section class="py-16 bg-gray-800">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-white mb-4">Event Packages</h2>
-      <p class="text-gray-300 text-lg">Choose the perfect package for your special day</p>
-      <div class="w-20 h-1 bg-red-500 mx-auto mt-4"></div>
+<section class="py-12 sm:py-16 bg-gray-800">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Event Packages</h2>
+      <p class="text-gray-300 text-base sm:text-lg">Choose the perfect package for your special day</p>
+      <div class="w-16 sm:w-20 h-1 bg-red-500 mx-auto mt-4"></div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
       <!-- Basic Package -->
-      <div class="bg-gray-700 rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300">
+      <div class="bg-gray-700 rounded-lg p-6 sm:p-8 hover:transform hover:scale-105 transition-all duration-300">
         <div class="text-center mb-6">
-          <h3 class="text-2xl font-bold text-white mb-2">Basic Package</h3>
-          <div class="text-4xl font-bold text-red-400 mb-2">₹25,000</div>
-          <p class="text-gray-400">Perfect for intimate gatherings</p>
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Basic Package</h3>
+          <div class="text-3xl sm:text-4xl font-bold text-red-400 mb-2">₹25,000</div>
+          <p class="text-gray-400 text-sm sm:text-base">Perfect for intimate gatherings</p>
         </div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-center text-gray-300">
+        <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Venue decoration</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Basic catering (50 guests)</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Event coordination</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Basic photography</span>
           </li>
         </ul>
-        <button class="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition">
+        <button class="w-full bg-red-500 text-white py-2 sm:py-3 rounded-lg hover:bg-red-600 transition text-sm sm:text-base">
           Choose Package
         </button>
       </div>
 
       <!-- Premium Package -->
-      <div class="bg-red-600 rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300 relative">
-        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">Most Popular</span>
+      <div class="bg-red-600 rounded-lg p-6 sm:p-8 hover:transform hover:scale-105 transition-all duration-300 relative">
+        <div class="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-yellow-400 text-gray-900 px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold">Most Popular</span>
         </div>
         <div class="text-center mb-6">
-          <h3 class="text-2xl font-bold text-white mb-2">Premium Package</h3>
-          <div class="text-4xl font-bold text-white mb-2">₹75,000</div>
-          <p class="text-red-100">For unforgettable celebrations</p>
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Premium Package</h3>
+          <div class="text-3xl sm:text-4xl font-bold text-white mb-2">₹75,000</div>
+          <p class="text-red-100 text-sm sm:text-base">For unforgettable celebrations</p>
         </div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-center text-white">
+        <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+          <li class="flex items-center text-white text-sm sm:text-base">
             <i class="fas fa-check text-yellow-300 mr-3"></i>
             <span>Full venue decoration</span>
           </li>
-          <li class="flex items-center text-white">
+          <li class="flex items-center text-white text-sm sm:text-base">
             <i class="fas fa-check text-yellow-300 mr-3"></i>
             <span>Premium catering (100 guests)</span>
           </li>
-          <li class="flex items-center text-white">
+          <li class="flex items-center text-white text-sm sm:text-base">
             <i class="fas fa-check text-yellow-300 mr-3"></i>
             <span>Professional coordination</span>
           </li>
-          <li class="flex items-center text-white">
+          <li class="flex items-center text-white text-sm sm:text-base">
             <i class="fas fa-check text-yellow-300 mr-3"></i>
             <span>Professional photography & video</span>
           </li>
-          <li class="flex items-center text-white">
+          <li class="flex items-center text-white text-sm sm:text-base">
             <i class="fas fa-check text-yellow-300 mr-3"></i>
             <span>Entertainment setup</span>
           </li>
         </ul>
-        <button class="w-full bg-white text-red-600 py-3 rounded-lg hover:bg-gray-100 transition font-bold">
+        <button class="w-full bg-white text-red-600 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition font-bold text-sm sm:text-base">
           Choose Package
         </button>
       </div>
 
       <!-- Luxury Package -->
-      <div class="bg-gray-700 rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300">
+      <div class="bg-gray-700 rounded-lg p-6 sm:p-8 hover:transform hover:scale-105 transition-all duration-300">
         <div class="text-center mb-6">
-          <h3 class="text-2xl font-bold text-white mb-2">Luxury Package</h3>
-          <div class="text-4xl font-bold text-red-400 mb-2">₹1,50,000</div>
-          <p class="text-gray-400">Ultimate celebration experience</p>
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Luxury Package</h3>
+          <div class="text-3xl sm:text-4xl font-bold text-red-400 mb-2">₹1,50,000</div>
+          <p class="text-gray-400 text-sm sm:text-base">Ultimate celebration experience</p>
         </div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-center text-gray-300">
+        <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Custom theme design</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Gourmet catering (200 guests)</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Dedicated event manager</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Cinematic video production</span>
           </li>
-          <li class="flex items-center text-gray-300">
+          <li class="flex items-center text-gray-300 text-sm sm:text-base">
             <i class="fas fa-check text-red-400 mr-3"></i>
             <span>Live entertainment</span>
           </li>
         </ul>
-        <button class="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition">
+        <button class="w-full bg-red-500 text-white py-2 sm:py-3 rounded-lg hover:bg-red-600 transition text-sm sm:text-base">
           Choose Package
         </button>
       </div>
@@ -347,170 +372,170 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-16 bg-gray-900">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-      <p class="text-gray-300 text-lg">Real stories from happy customers</p>
-      <div class="w-20 h-1 bg-red-500 mx-auto mt-4"></div>
+<section class="py-12 sm:py-16 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+      <p class="text-gray-300 text-base sm:text-lg">Real stories from happy customers</p>
+      <div class="w-16 sm:w-20 h-1 bg-red-500 mx-auto mt-4"></div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
       <!-- Testimonial 1 -->
-      <div class="bg-gray-800 rounded-lg p-6">
+      <div class="bg-gray-800 rounded-lg p-4 sm:p-6">
         <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
-            <span class="text-white font-bold">S</span>
+          <div class="w-10 sm:w-12 h-10 sm:h-12 bg-red-500 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+            <span class="text-white font-bold text-sm sm:text-base">S</span>
           </div>
           <div>
-            <h4 class="text-white font-semibold">Sarah & John</h4>
-            <p class="text-gray-400 text-sm">Wedding Celebration</p>
+            <h4 class="text-white font-semibold text-sm sm:text-base">Sarah & John</h4>
+            <p class="text-gray-400 text-xs sm:text-sm">Wedding Celebration</p>
           </div>
         </div>
-        <div class="flex text-yellow-400 mb-4">
+        <div class="flex text-yellow-400 mb-4 text-sm sm:text-base">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <p class="text-gray-300 italic">"Timeless Toast made our wedding day absolutely magical. Every detail was perfect, and our guests are still talking about it months later!"</p>
+        <p class="text-gray-300 italic text-sm sm:text-base">"Timeless Toast made our wedding day absolutely magical. Every detail was perfect, and our guests are still talking about it months later!"</p>
       </div>
 
       <!-- Testimonial 2 -->
-      <div class="bg-gray-800 rounded-lg p-6">
+      <div class="bg-gray-800 rounded-lg p-4 sm:p-6">
         <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
-            <span class="text-white font-bold">M</span>
+          <div class="w-10 sm:w-12 h-10 sm:h-12 bg-red-500 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+            <span class="text-white font-bold text-sm sm:text-base">M</span>
           </div>
           <div>
-            <h4 class="text-white font-semibold">Mike & Lisa</h4>
-            <p class="text-gray-400 text-sm">Corporate Event</p>
+            <h4 class="text-white font-semibold text-sm sm:text-base">Mike & Lisa</h4>
+            <p class="text-gray-400 text-xs sm:text-sm">Corporate Event</p>
           </div>
         </div>
-        <div class="flex text-yellow-400 mb-4">
+        <div class="flex text-yellow-400 mb-4 text-sm sm:text-base">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <p class="text-gray-300 italic">"Professional, creative, and absolutely reliable. Our company's annual celebration was a huge success thanks to their expertise."</p>
+        <p class="text-gray-300 italic text-sm sm:text-base">"Professional, creative, and absolutely reliable. Our company's annual celebration was a huge success thanks to their expertise."</p>
       </div>
 
       <!-- Testimonial 3 -->
-      <div class="bg-gray-800 rounded-lg p-6">
+      <div class="bg-gray-800 rounded-lg p-4 sm:p-6">
         <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
-            <span class="text-white font-bold">A</span>
+          <div class="w-10 sm:w-12 h-10 sm:h-12 bg-red-500 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+            <span class="text-white font-bold text-sm sm:text-base">A</span>
           </div>
           <div>
-            <h4 class="text-white font-semibold">Alex & Emma</h4>
-            <p class="text-gray-400 text-sm">Birthday Party</p>
+            <h4 class="text-white font-semibold text-sm sm:text-base">Alex & Emma</h4>
+            <p class="text-gray-400 text-xs sm:text-sm">Birthday Party</p>
           </div>
         </div>
-        <div class="flex text-yellow-400 mb-4">
+        <div class="flex text-yellow-400 mb-4 text-sm sm:text-base">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <p class="text-gray-300 italic">"My daughter's sweet 16 was beyond her wildest dreams. The team's creativity and attention to detail was incredible!"</p>
+        <p class="text-gray-300 italic text-sm sm:text-base">"My daughter's sweet 16 was beyond her wildest dreams. The team's creativity and attention to detail was incredible!"</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Team Section -->
-<section class="py-16 bg-gray-800">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-      <p class="text-gray-300 text-lg">The creative minds behind your perfect event</p>
-      <div class="w-20 h-1 bg-red-500 mx-auto mt-4"></div>
+<section class="py-12 sm:py-16 bg-gray-800">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Meet Our Team</h2>
+      <p class="text-gray-300 text-base sm:text-lg">The creative minds behind your perfect event</p>
+      <div class="w-16 sm:w-20 h-1 bg-red-500 mx-auto mt-4"></div>
     </div>
 
-    <div class="grid md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
       <!-- Team Member 1 -->
       <div class="text-center">
-        <div class="w-32 h-32 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-          <span class="text-white text-3xl font-bold">A</span>
+        <div class="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-red-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+          <span class="text-white text-2xl sm:text-3xl font-bold">A</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">Alex Johnson</h3>
-        <p class="text-red-400 mb-3">Creative Director</p>
-        <p class="text-gray-300 text-sm">10+ years of experience in event design and coordination</p>
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Alex Johnson</h3>
+        <p class="text-red-400 mb-2 sm:mb-3 text-sm sm:text-base">Creative Director</p>
+        <p class="text-gray-300 text-xs sm:text-sm">10+ years of experience in event design and coordination</p>
       </div>
 
       <!-- Team Member 2 -->
       <div class="text-center">
-        <div class="w-32 h-32 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-          <span class="text-white text-3xl font-bold">S</span>
+        <div class="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-red-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+          <span class="text-white text-2xl sm:text-3xl font-bold">S</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">Sarah Chen</h3>
-        <p class="text-red-400 mb-3">Event Manager</p>
-        <p class="text-gray-300 text-sm">Specializes in luxury weddings and corporate events</p>
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Sarah Chen</h3>
+        <p class="text-red-400 mb-2 sm:mb-3 text-sm sm:text-base">Event Manager</p>
+        <p class="text-gray-300 text-xs sm:text-sm">Specializes in luxury weddings and corporate events</p>
       </div>
 
       <!-- Team Member 3 -->
       <div class="text-center">
-        <div class="w-32 h-32 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-          <span class="text-white text-3xl font-bold">M</span>
+        <div class="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-red-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+          <span class="text-white text-2xl sm:text-3xl font-bold">M</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">Mike Rodriguez</h3>
-        <p class="text-red-400 mb-3">Catering Specialist</p>
-        <p class="text-gray-300 text-sm">Expert in gourmet cuisine and menu planning</p>
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Mike Rodriguez</h3>
+        <p class="text-red-400 mb-2 sm:mb-3 text-sm sm:text-base">Catering Specialist</p>
+        <p class="text-gray-300 text-xs sm:text-sm">Expert in gourmet cuisine and menu planning</p>
       </div>
 
       <!-- Team Member 4 -->
       <div class="text-center">
-        <div class="w-32 h-32 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-          <span class="text-white text-3xl font-bold">E</span>
+        <div class="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-red-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+          <span class="text-white text-2xl sm:text-3xl font-bold">E</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">Emma Wilson</h3>
-        <p class="text-red-400 mb-3">Floral Designer</p>
-        <p class="text-gray-300 text-sm">Creates stunning floral arrangements and decorations</p>
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Emma Wilson</h3>
+        <p class="text-red-400 mb-2 sm:mb-3 text-sm sm:text-base">Floral Designer</p>
+        <p class="text-gray-300 text-xs sm:text-sm">Creates stunning floral arrangements and decorations</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Contact Form Section -->
-<section class="py-16 bg-gray-900">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-white mb-4">Start Planning Your Event</h2>
-      <p class="text-gray-300 text-lg">Get in touch with us to discuss your vision</p>
-      <div class="w-20 h-1 bg-red-500 mx-auto mt-4"></div>
+<section class="py-12 sm:py-16 bg-gray-900">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Start Planning Your Event</h2>
+      <p class="text-gray-300 text-base sm:text-lg">Get in touch with us to discuss your vision</p>
+      <div class="w-16 sm:w-20 h-1 bg-red-500 mx-auto mt-4"></div>
     </div>
 
-    <div class="bg-gray-800 rounded-lg p-8">
-      <form class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-gray-800 rounded-lg p-6 sm:p-8">
+      <form class="space-y-4 sm:space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div>
-            <label class="block text-white mb-2">First Name</label>
-            <input type="text" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+            <label class="block text-white mb-2 text-sm sm:text-base">First Name</label>
+            <input type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
           </div>
           <div>
-            <label class="block text-white mb-2">Last Name</label>
-            <input type="text" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+            <label class="block text-white mb-2 text-sm sm:text-base">Last Name</label>
+            <input type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
           </div>
         </div>
         
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div>
-            <label class="block text-white mb-2">Email</label>
-            <input type="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+            <label class="block text-white mb-2 text-sm sm:text-base">Email</label>
+            <input type="email" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
           </div>
           <div>
-            <label class="block text-white mb-2">Phone</label>
-            <input type="tel" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+            <label class="block text-white mb-2 text-sm sm:text-base">Phone</label>
+            <input type="tel" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
           </div>
         </div>
 
         <div>
-          <label class="block text-white mb-2">Event Type</label>
-          <select class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+          <label class="block text-white mb-2 text-sm sm:text-base">Event Type</label>
+          <select class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
             <option>Wedding</option>
             <option>Birthday Party</option>
             <option>Corporate Event</option>
@@ -519,23 +544,24 @@
           </select>
         </div>
 
-        <div>
-          <label class="block text-white mb-2">Event Date</label>
-          <input type="date" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div>
+            <label class="block text-white mb-2 text-sm sm:text-base">Event Date</label>
+            <input type="date" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
+          </div>
+          <div>
+            <label class="block text-white mb-2 text-sm sm:text-base">Number of Guests</label>
+            <input type="number" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base">
+          </div>
         </div>
 
         <div>
-          <label class="block text-white mb-2">Number of Guests</label>
-          <input type="number" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
-        </div>
-
-        <div>
-          <label class="block text-white mb-2">Message</label>
-          <textarea rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none" placeholder="Tell us about your event vision..."></textarea>
+          <label class="block text-white mb-2 text-sm sm:text-base">Message</label>
+          <textarea rows="4" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none text-sm sm:text-base" placeholder="Tell us about your event vision..."></textarea>
         </div>
 
         <div class="text-center">
-          <button type="submit" class="bg-red-500 text-white px-8 py-3 rounded-lg hover:bg-red-600 transition font-semibold">
+          <button type="submit" class="bg-red-500 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-red-600 transition font-semibold text-sm sm:text-base">
             Send Message
           </button>
         </div>
@@ -545,24 +571,24 @@
 </section>
 
 <!-- Stats Section -->
-<section class="py-16 bg-red-600">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-4 gap-8 text-center">
+<section class="py-12 sm:py-16 bg-red-600">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
       <div>
-        <div class="text-4xl font-bold text-white mb-2">500+</div>
-        <p class="text-red-100">Events Planned</p>
+        <div class="text-3xl sm:text-4xl font-bold text-white mb-2">500+</div>
+        <p class="text-red-100 text-sm sm:text-base">Events Planned</p>
       </div>
       <div>
-        <div class="text-4xl font-bold text-white mb-2">1000+</div>
-        <p class="text-red-100">Happy Clients</p>
+        <div class="text-3xl sm:text-4xl font-bold text-white mb-2">1000+</div>
+        <p class="text-red-100 text-sm sm:text-base">Happy Clients</p>
       </div>
       <div>
-        <div class="text-4xl font-bold text-white mb-2">5.0</div>
-        <p class="text-red-100">Average Rating</p>
+        <div class="text-3xl sm:text-4xl font-bold text-white mb-2">5.0</div>
+        <p class="text-red-100 text-sm sm:text-base">Average Rating</p>
       </div>
       <div>
-        <div class="text-4xl font-bold text-white mb-2">24/7</div>
-        <p class="text-red-100">Support Available</p>
+        <div class="text-3xl sm:text-4xl font-bold text-white mb-2">24/7</div>
+        <p class="text-red-100 text-sm sm:text-base">Support Available</p>
       </div>
     </div>
   </div>
@@ -770,6 +796,19 @@
         </div>
     </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

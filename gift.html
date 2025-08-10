@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,11 +38,13 @@
                             <span class="text-white font-bold text-lg">T</span>
                         </div>
                         <div>
-                            <h1 class="text-2xl font-bold text-white">Timeless Toast</h1>
+                            <h1 class="text-xl sm:text-2xl font-bold text-white">Timeless Toast</h1>
                             <p class="text-xs text-rose-300 -mt-1">Premium Gifts</p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-300 hover:text-rose-400 transition-all duration-300 font-medium relative group">
                         Home
@@ -62,14 +63,36 @@
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-500 transition-all group-hover:w-full"></span>
                     </a>
                 </div>
+                
                 <div class="flex items-center space-x-4">
                     <div class="hidden md:flex items-center text-gray-300 text-sm">
                         <i class="fas fa-phone mr-2 text-rose-400"></i>
                         <span class="font-medium">+91 9876543210</span>
                     </div>
-                    <button class="bg-gradient-to-r from-rose-600 to-rose-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:shadow-rose-500/30 transition-all duration-300 font-bold text-sm">
+                    <button class="bg-gradient-to-r from-rose-600 to-rose-500 text-white px-4 sm:px-6 py-2 rounded-full hover:shadow-lg hover:shadow-rose-500/30 transition-all duration-300 font-bold text-sm">
                         Get Quote
                     </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="lg:hidden text-white hover:text-rose-400 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 rounded-lg mt-4 p-4">
+                <div class="space-y-4">
+                    <a href="index.html" class="block text-gray-300 hover:text-rose-400 transition-colors py-2">Home</a>
+                    <a href="event.html" class="block text-gray-300 hover:text-rose-400 transition-colors py-2">Events</a>
+                    <a href="#gifts" class="block text-gray-300 hover:text-rose-400 transition-colors py-2">Gifts</a>
+                    <a href="#about" class="block text-gray-300 hover:text-rose-400 transition-colors py-2">About</a>
+                    <div class="pt-2 border-t border-gray-700">
+                        <div class="flex items-center text-gray-300 text-sm py-2">
+                            <i class="fas fa-phone mr-2 text-rose-400"></i>
+                            <span class="font-medium">+91 9876543210</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,189 +126,174 @@
     </nav> -->
 
     <div class="flex items-center flex-col my-8 px-4 text-center">
-        <h1 class="text-3xl sm:text-5xl font-bold mb-6">
+        <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">
             Gifts That Speak From <span class="text-red-500">The Heart</span>
         </h1>
-        <p class="text-base sm:text-xl mb-6 leading-relaxed">
-            "Whether it’s a birthday, anniversary, or just because, our curated gifts are made <br>
+        <p class="text-sm sm:text-base md:text-xl mb-4 sm:mb-6 leading-relaxed">
+            "Whether it's a birthday, anniversary, or just because, our curated gifts are made <br class="hidden sm:block">
             to capture emotions, spark smiles, and
             <b class="text-rose-500">turn every moment into a cherished memory</b>."
         </p>
-        <p class="text-base sm:text-xl mb-6 leading-relaxed">
-            "From thoughtful keepsakes to grand surprises, find the <br>
+        <p class="text-sm sm:text-base md:text-xl mb-4 sm:mb-6 leading-relaxed">
+            "From thoughtful keepsakes to grand surprises, find the <br class="hidden sm:block">
             perfect gift to make every celebration unforgettable."
         </p>
-        <p class="text-base sm:text-xl leading-relaxed">
+        <p class="text-sm sm:text-base md:text-xl leading-relaxed">
             <b class="text-rose-500">Celebrate Love</b> in its purest form with gifts that whisper affection, embrace
-            the heart, and <br>
+            the heart, and <br class="hidden sm:block">
             make every shared moment feel like forever.
         </p>
     </div>
 
     <div>
-        <h1 class="text-3xl sm:text-3xl font-bold mb-6 text-center mt-30 text-rose-400">How can we help you?</h1>
-        <div class="w-full md:grid grid-cols-2 md:px-70 gap-10 ">
-            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white ">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center mt-20 sm:mt-30 text-rose-400">How can we help you?</h1>
+        <div class="w-full md:grid grid-cols-2 md:px-8 lg:px-70 gap-6 sm:gap-10 px-4 sm:px-6">
+            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white rounded-lg p-4 sm:p-6 mb-6 md:mb-0">
 
-                <i class="fa-solid fa-box text-rose-400 text-6xl my-8 hover:text-rose-500 "></i>
-                <h1 class="text-2xl text-rose-400  mb-5 hover:text-rose-500">GIFT RECEIVING</h1>
-                <p class="mt-4 text-center px-4"><b class="text-md">Do you want to send items to Kerala from your
-                        country?</b><br>
+                <i class="fa-solid fa-box text-rose-400 text-4xl sm:text-6xl my-6 sm:my-8 hover:text-rose-500"></i>
+                <h1 class="text-xl sm:text-2xl text-rose-400 mb-3 sm:mb-5 hover:text-rose-500">GIFT RECEIVING</h1>
+                <p class="mt-4 text-center px-2 sm:px-4 text-sm sm:text-base"><b class="text-sm sm:text-md">Do you want to send items to Kerala from your
+                    country?</b><br>
 
                     We can receive your parcels, take care of customs, wrap them beautifully and deliver safely</p>
                 <button
-                    class="mt-10 bg-gray-800  hover:bg-rose-400 cursor-pointer rounded-xl  text-white py-3 px-5 mb-5">MAKE
+                    class="mt-8 sm:mt-10 bg-gray-800 hover:bg-rose-400 cursor-pointer rounded-xl text-white py-2 sm:py-3 px-4 sm:px-5 mb-4 sm:mb-5 text-sm sm:text-base">MAKE
                     ENQUIRY</button>
             </div>
-            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white ">
+            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white rounded-lg p-4 sm:p-6 mb-6 md:mb-0">
 
-                <i class="fa-solid fa-bag-shopping text-rose-400 text-5xl my-8 hover:text-rose-500"></i>
-                <h1 class="text-2xl text-rose-400  mb-5 hover:text-rose-500">GIFT PURCHASING</h1>
-                <p class="mt-4 text-center px-4"><b class="text-md">Do you want to purchase items outside
-                        Giftorea?</b><br>
-
-
+                <i class="fa-solid fa-bag-shopping text-rose-400 text-4xl sm:text-5xl my-6 sm:my-8 hover:text-rose-500"></i>
+                <h1 class="text-xl sm:text-2xl text-rose-400 mb-3 sm:mb-5 hover:text-rose-500">GIFT PURCHASING</h1>
+                <p class="mt-4 text-center px-2 sm:px-4 text-sm sm:text-base"><b class="text-sm sm:text-md">Do you want to purchase items outside
+                    Giftorea?</b><br>
 
                     We can buy items from any stores in Kerala (Online/Offline) and arrange a delivery for you. </p>
                 <button
-                    class="mt-10 bg-gray-800  hover:bg-rose-400 cursor-pointer rounded-xl  text-white py-3 px-5 mb-5">MAKE
+                    class="mt-8 sm:mt-10 bg-gray-800 hover:bg-rose-400 cursor-pointer rounded-xl text-white py-2 sm:py-3 px-4 sm:px-5 mb-4 sm:mb-5 text-sm sm:text-base">MAKE
                     ENQUIRY</button>
             </div>
-            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white ">
+            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white rounded-lg p-4 sm:p-6 mb-6 md:mb-0">
 
-                <i class="fa-solid fa-gift text-rose-400 text-5xl my-8 hover:text-rose-500"></i>
-                <h1 class="text-2xl text-rose-400  mb-5 hover:text-rose-500">GIFT WRAPPING</h1>
-                <p class="mt-4 text-center px-4"><b class="text-md">Looking for gift wrapping services for your
-                        gifts?</b><br>
+                <i class="fa-solid fa-gift text-rose-400 text-4xl sm:text-5xl my-6 sm:my-8 hover:text-rose-500"></i>
+                <h1 class="text-xl sm:text-2xl text-rose-400 mb-3 sm:mb-5 hover:text-rose-500">GIFT WRAPPING</h1>
+                <p class="mt-4 text-center px-2 sm:px-4 text-sm sm:text-base"><b class="text-sm sm:text-md">Looking for gift wrapping services for your
+                    gifts?</b><br>
 
                     We provide customized gift wrapping service with your preferred colors with style for all types of
                     items.</p>
                 <button
-                    class="mt-10 bg-gray-800  hover:bg-rose-400 cursor-pointer rounded-xl  text-white py-3 px-5 mb-5">MAKE
+                    class="mt-8 sm:mt-10 bg-gray-800 hover:bg-rose-400 cursor-pointer rounded-xl text-white py-2 sm:py-3 px-4 sm:px-5 mb-4 sm:mb-5 text-sm sm:text-base">MAKE
                     ENQUIRY</button>
             </div>
-            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white ">
+            <div class="text-center pt-5 bg-gray-700/80 hover:border-2 border-white rounded-lg p-4 sm:p-6 mb-6 md:mb-0">
 
-                <i class="fa-solid fa-truck-fast text-rose-400 text-5xl my-8 hover:text-rose-700"></i>
-                <h1 class="text-2xl text-rose-400  mb-5 hover:text-rose-700">
+                <i class="fa-solid fa-truck-fast text-rose-400 text-4xl sm:text-5xl my-6 sm:my-8 hover:text-rose-700"></i>
+                <h1 class="text-xl sm:text-2xl text-rose-400 mb-3 sm:mb-5 hover:text-rose-700">
                     INTERNATIONAL SHIPPING</h1>
-                <p class="mt-4 text-center px-4"><b class="text-md"> Do you want to ship items from Korea to your
-                        country?</b><br>
-
+                <p class="mt-4 text-center px-2 sm:px-4 text-sm sm:text-base"><b class="text-sm sm:text-md"> Do you want to ship items from Korea to your
+                    country?</b><br>
 
                     We can purchase items from Korea and send them to your destination via international shipping
                     service.
 
                 </p>
                 <button
-                    class="mt-10 bg-gray-800  hover:bg-rose-400 cursor-pointer rounded-xl  text-white py-3 px-5 mb-5">MAKE
+                    class="mt-8 sm:mt-10 bg-gray-800 hover:bg-rose-400 cursor-pointer rounded-xl text-white py-2 sm:py-3 px-4 sm:px-5 mb-4 sm:mb-5 text-sm sm:text-base">MAKE
                     ENQUIRY</button>
             </div>
-
-
-
         </div>
     </div>
 
-    <div class=" text-center ">
-        <h1 class="text-left sm:text-3xl font-bold mb-6 mx-60 mt-30 ">Flowers</h1>
+    <div class="text-center">
+        <h1 class="text-left sm:text-3xl font-bold mb-4 sm:mb-6 mx-4 sm:mx-60 mt-20 sm:mt-30">Flowers</h1>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 px-60 ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 px-4 sm:px-60">
 
-            <div class="bg-gray-800/90  shadow-lg overflow-hidden w-64">
+            <div class="bg-gray-800/90 shadow-lg overflow-hidden w-full max-w-64 mx-auto">
                 <div class="relative group">
                     <img src="https://static.wixstatic.com/media/fccaac_db26a08702124598a9701ea9a081203d~mv2.jpg/v1/fill/w_263,h_263,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fccaac_db26a08702124598a9701ea9a081203d~mv2.jpg"
-                        alt="Hydrangea with Polaroid Photos" class="w-full h-56 object-cover">
+                        alt="Hydrangea with Polaroid Photos" class="w-full h-48 sm:h-56 object-cover">
 
-
-                    <div class="absolute bottom-0 left-0 right-0  bg-rose-400 bg-opacity-50 text-white text-center py-2 
+                    <div class="absolute bottom-0 left-0 right-0 bg-rose-400 bg-opacity-50 text-white text-center py-2 
                     opacity-0 translate-y-full group-hover:opacity-50 group-hover:translate-y-0 
-                    transition duration-300">
+                    transition duration-300 text-sm">
                         Quick View
                     </div>
                 </div>
 
-
-                <div class="text-center p-2">
-                    <h3 class="text-lg font-semibold">Hydrangea with Polaroid Photos</h3>
+                <div class="text-center p-2 sm:p-3">
+                    <h3 class="text-base sm:text-lg font-semibold">Hydrangea with Polaroid Photos</h3>
                     <div class="flex justify-center text-center">
-                        <span class="block mt-1 text-gray-300 mt-3">$130.00</span>
-                        <i class="fa-solid fa-cart-shopping ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
+                        <span class="block mt-1 text-gray-300 mt-2 sm:mt-3 text-sm sm:text-base">$130.00</span>
+                        <i class="fa-solid fa-cart-shopping ml-6 sm:ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
                     </div>
                 </div>
             </div>
 
-
-            <div class="bg-gray-800/90  shadow-lg overflow-hidden w-64">
+            <div class="bg-gray-800/90 shadow-lg overflow-hidden w-full max-w-64 mx-auto">
                 <div class="relative group">
                     <img src="https://static.wixstatic.com/media/fccaac_a563b5d001094aaa95d821dd7b968193~mv2.jpg/v1/fill/w_263,h_263,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fccaac_a563b5d001094aaa95d821dd7b968193~mv2.jpg"
-                        alt="Hydrangea with Polaroid Photos" class="w-full h-56 object-cover">
-
+                        alt="Hydrangea with Polaroid Photos" class="w-full h-48 sm:h-56 object-cover">
 
                     <div class="absolute bottom-0 left-0 right-0 bg-rose-400 bg-opacity-50 text-white text-center py-2 
                     opacity-0 translate-y-full group-hover:opacity-50 group-hover:translate-y-0 
-                    transition duration-300 ">
+                    transition duration-300 text-sm">
                         Quick View
                     </div>
                 </div>
 
-
-
-                <div class="text-center p-2">
-                    <h3 class="text-lg font-semibold">Lavender & Baby Blue Flower with Balloon Arrangement</h3>
-                  <div class="flex justify-center text-center">
-                        <span class="block mt-1 text-gray-300 mt-3">$300.00</span>
-                        <i class="fa-solid fa-cart-shopping ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
+                <div class="text-center p-2 sm:p-3">
+                    <h3 class="text-base sm:text-lg font-semibold">Lavender & Baby Blue Flower with Balloon Arrangement</h3>
+                    <div class="flex justify-center text-center">
+                        <span class="block mt-1 text-gray-300 mt-2 sm:mt-3 text-sm sm:text-base">$300.00</span>
+                        <i class="fa-solid fa-cart-shopping ml-6 sm:ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-800/90  shadow-lg overflow-hidden w-64">
+            <div class="bg-gray-800/90 shadow-lg overflow-hidden w-full max-w-64 mx-auto">
                 <div class="relative group">
                     <img src="https://static.wixstatic.com/media/fccaac_432733d6b40b4ec69b79a4c9ed77e272~mv2.png/v1/fill/w_263,h_263,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fccaac_432733d6b40b4ec69b79a4c9ed77e272~mv2.png"
-                        alt="Hydrangea with Polaroid Photos" class="w-full h-56 object-cover">
+                        alt="Hydrangea with Polaroid Photos" class="w-full h-48 sm:h-56 object-cover">
 
                     <div class="absolute bottom-0 left-0 right-0 bg-rose-400 bg-opacity-50 text-white text-center py-2 
                     opacity-0 translate-y-full group-hover:opacity-50 group-hover:translate-y-0 
-                    transition duration-300">
+                    transition duration-300 text-sm">
                         Quick View
                     </div>
                 </div>
 
-                <div class="text-center p-2">
-                    <h3 class="text-lg font-semibold">Mini Vase Pastel</h3>
-                    <div class="flex justify-center text-center mt-6">
-                        <span class="block mt-1 text-gray-300 mt-3">$50.00</span>
-                        <i class="fa-solid fa-cart-shopping ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
+                <div class="text-center p-2 sm:p-3">
+                    <h3 class="text-base sm:text-lg font-semibold">Mini Vase Pastel</h3>
+                    <div class="flex justify-center text-center mt-4 sm:mt-6">
+                        <span class="block mt-1 text-gray-300 mt-2 sm:mt-3 text-sm sm:text-base">$50.00</span>
+                        <i class="fa-solid fa-cart-shopping ml-6 sm:ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-800/90  shadow-lg overflow-hidden w-64">
+            <div class="bg-gray-800/90 shadow-lg overflow-hidden w-full max-w-64 mx-auto">
                 <div class="relative group">
                     <img src="https://static.wixstatic.com/media/fccaac_bffba960675147c19b74e788bc14202b~mv2.png/v1/fill/w_263,h_263,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fccaac_bffba960675147c19b74e788bc14202b~mv2.png"
-                        alt="Hydrangea with Polaroid Photos" class="w-full h-56 object-cover">
+                        alt="Hydrangea with Polaroid Photos" class="w-full h-48 sm:h-56 object-cover">
 
                     <div class="absolute bottom-0 left-0 right-0 bg-rose-400 bg-opacity-50 text-white text-center py-2 
                     opacity-0 translate-y-full group-hover:opacity-50 group-hover:translate-y-0 
-                    transition duration-300">
+                    transition duration-300 text-sm">
                         Quick View
                     </div>
                 </div>
 
-                <div class="text-center p-2">
-                    <h3 class="text-lg font-semibold">Petite Pastel Dream</h3>
-                    <div class="flex justify-center text-center mt-6">
-                        <span class="block mt-1 text-gray-300 mt-3">$150.00</span>
-                        <i class="fa-solid fa-cart-shopping ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
+                <div class="text-center p-2 sm:p-3">
+                    <h3 class="text-base sm:text-lg font-semibold">Petite Pastel Dream</h3>
+                    <div class="flex justify-center text-center mt-4 sm:mt-6">
+                        <span class="block mt-1 text-gray-300 mt-2 sm:mt-3 text-sm sm:text-base">$150.00</span>
+                        <i class="fa-solid fa-cart-shopping ml-6 sm:ml-10 mt-2 bg-red-500 rounded-2xl py-2 px-3 text-lg hover:bg-red-800"></i>
                     </div>
                 </div>
-                
             </div>
-
         </div>
         <button
-            class="mt-10 bg-gray-800 text-center  hover:bg-rose-400 cursor-pointer rounded-xl  text-white py-3 px-5 mb-5">SHOP
+            class="mt-8 sm:mt-10 bg-gray-800 text-center hover:bg-rose-400 cursor-pointer rounded-xl text-white py-2 sm:py-3 px-4 sm:px-5 mb-4 sm:mb-5 text-sm sm:text-base">SHOP
             FLOWERS</button>
-
     </div>
 
     <div class=" text-center ">
@@ -900,83 +908,83 @@
     </section>
 
     <!-- Gift Categories Section -->
-    <section class="py-16 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4">Gift Categories</h2>
-                <p class="text-gray-300 text-lg">Explore our curated collections for every occasion</p>
-                <div class="w-20 h-1 bg-rose-500 mx-auto mt-4"></div>
+    <section class="py-12 sm:py-16 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Gift Categories</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Explore our curated collections for every occasion</p>
+                <div class="w-16 sm:w-20 h-1 bg-rose-500 mx-auto mt-4"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <!-- Occasion Gifts -->
-                <div class="bg-gray-700 rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
-                    <div class="w-16 h-16 bg-rose-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <i class="fas fa-heart text-white text-2xl"></i>
+                <div class="bg-gray-700 rounded-lg p-4 sm:p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-rose-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <i class="fas fa-heart text-white text-lg sm:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Occasion Gifts</h3>
-                    <p class="text-gray-300 text-sm mb-4">Perfect gifts for birthdays, anniversaries, and special moments</p>
-                    <ul class="text-gray-400 text-sm space-y-1 mb-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Occasion Gifts</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4">Perfect gifts for birthdays, anniversaries, and special moments</p>
+                    <ul class="text-gray-400 text-xs sm:text-sm space-y-1 mb-4 sm:mb-6">
                         <li>• Birthday Collections</li>
                         <li>• Anniversary Gifts</li>
                         <li>• Graduation Gifts</li>
                         <li>• Housewarming</li>
                     </ul>
-                    <button class="bg-rose-500 text-white px-6 py-2 rounded-lg hover:bg-rose-600 transition">
+                    <button class="bg-rose-500 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-rose-600 transition text-sm sm:text-base">
                         Explore
                     </button>
                 </div>
 
                 <!-- Luxury Gifts -->
-                <div class="bg-gray-700 rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
-                    <div class="w-16 h-16 bg-rose-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <i class="fas fa-crown text-white text-2xl"></i>
+                <div class="bg-gray-700 rounded-lg p-4 sm:p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-rose-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <i class="fas fa-crown text-white text-lg sm:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Luxury Gifts</h3>
-                    <p class="text-gray-300 text-sm mb-4">Premium and exclusive gifts for the discerning</p>
-                    <ul class="text-gray-400 text-sm space-y-1 mb-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Luxury Gifts</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4">Premium and exclusive gifts for the discerning</p>
+                    <ul class="text-gray-400 text-xs sm:text-sm space-y-1 mb-4 sm:mb-6">
                         <li>• Designer Items</li>
                         <li>• Premium Hampers</li>
                         <li>• Luxury Watches</li>
                         <li>• Fine Jewelry</li>
                     </ul>
-                    <button class="bg-rose-500 text-white px-6 py-2 rounded-lg hover:bg-rose-600 transition">
+                    <button class="bg-rose-500 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-rose-600 transition text-sm sm:text-base">
                         Explore
                     </button>
                 </div>
 
                 <!-- Personalized Gifts -->
-                <div class="bg-gray-700 rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
-                    <div class="w-16 h-16 bg-rose-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <i class="fas fa-magic text-white text-2xl"></i>
+                <div class="bg-gray-700 rounded-lg p-4 sm:p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-rose-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <i class="fas fa-magic text-white text-lg sm:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Personalized Gifts</h3>
-                    <p class="text-gray-300 text-sm mb-4">Custom-made gifts with personal touches</p>
-                    <ul class="text-gray-400 text-sm space-y-1 mb-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Personalized Gifts</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4">Custom-made gifts with personal touches</p>
+                    <ul class="text-gray-400 text-xs sm:text-sm space-y-1 mb-4 sm:mb-6">
                         <li>• Custom Engraving</li>
                         <li>• Photo Gifts</li>
                         <li>• Name Jewelry</li>
                         <li>• Custom Art</li>
                     </ul>
-                    <button class="bg-rose-500 text-white px-6 py-2 rounded-lg hover:bg-rose-600 transition">
+                    <button class="bg-rose-500 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-rose-600 transition text-sm sm:text-base">
                         Explore
                     </button>
                 </div>
 
                 <!-- Corporate Gifts -->
-                <div class="bg-gray-700 rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
-                    <div class="w-16 h-16 bg-rose-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <i class="fas fa-briefcase text-white text-2xl"></i>
+                <div class="bg-gray-700 rounded-lg p-4 sm:p-6 hover:transform hover:scale-105 transition-all duration-300 text-center">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-rose-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                        <i class="fas fa-briefcase text-white text-lg sm:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Corporate Gifts</h3>
-                    <p class="text-gray-300 text-sm mb-4">Professional gifts for business relationships</p>
-                    <ul class="text-gray-400 text-sm space-y-1 mb-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Corporate Gifts</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4">Professional gifts for business relationships</p>
+                    <ul class="text-gray-400 text-xs sm:text-sm space-y-1 mb-4 sm:mb-6">
                         <li>• Executive Gifts</li>
                         <li>• Team Gifts</li>
                         <li>• Client Appreciation</li>
                         <li>• Branded Items</li>
                     </ul>
-                    <button class="bg-rose-500 text-white px-6 py-2 rounded-lg hover:bg-rose-600 transition">
+                    <button class="bg-rose-500 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-rose-600 transition text-sm sm:text-base">
                         Explore
                     </button>
                 </div>
@@ -985,58 +993,58 @@
     </section>
 
     <!-- Special Offers Section -->
-    <section class="py-16 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4">Special Offers</h2>
-                <p class="text-gray-300 text-lg">Limited time deals on our most popular gifts</p>
-                <div class="w-20 h-1 bg-rose-500 mx-auto mt-4"></div>
+    <section class="py-12 sm:py-16 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Special Offers</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Limited time deals on our most popular gifts</p>
+                <div class="w-16 sm:w-20 h-1 bg-rose-500 mx-auto mt-4"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Offer 1 -->
-                <div class="bg-gradient-to-br from-rose-600 to-rose-700 rounded-lg p-8 relative overflow-hidden">
-                    <div class="absolute top-4 right-4">
-                        <span class="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">50% OFF</span>
+                <div class="bg-gradient-to-br from-rose-600 to-rose-700 rounded-lg p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute top-3 sm:top-4 right-3 sm:right-4">
+                        <span class="bg-yellow-400 text-gray-900 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">50% OFF</span>
                     </div>
                     <div class="text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">Valentine's Collection</h3>
-                        <p class="text-rose-100 mb-6">Romantic gifts for your special someone</p>
-                        <div class="text-3xl font-bold text-white mb-4">₹2,500</div>
-                        <div class="text-rose-200 line-through mb-6">₹5,000</div>
-                        <button class="bg-white text-rose-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Valentine's Collection</h3>
+                        <p class="text-rose-100 mb-4 sm:mb-6 text-sm sm:text-base">Romantic gifts for your special someone</p>
+                        <div class="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">₹2,500</div>
+                        <div class="text-rose-200 line-through mb-4 sm:mb-6 text-sm sm:text-base">₹5,000</div>
+                        <button class="bg-white text-rose-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition font-semibold text-sm sm:text-base">
                             Shop Now
                         </button>
                     </div>
                 </div>
 
                 <!-- Offer 2 -->
-                <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-8 relative overflow-hidden">
-                    <div class="absolute top-4 right-4">
-                        <span class="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">30% OFF</span>
+                <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute top-3 sm:top-4 right-3 sm:right-4">
+                        <span class="bg-yellow-400 text-gray-900 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">30% OFF</span>
                     </div>
                     <div class="text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">Birthday Bundle</h3>
-                        <p class="text-purple-100 mb-6">Complete birthday celebration package</p>
-                        <div class="text-3xl font-bold text-white mb-4">₹3,500</div>
-                        <div class="text-purple-200 line-through mb-6">₹5,000</div>
-                        <button class="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Birthday Bundle</h3>
+                        <p class="text-purple-100 mb-4 sm:mb-6 text-sm sm:text-base">Complete birthday celebration package</p>
+                        <div class="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">₹3,500</div>
+                        <div class="text-purple-200 line-through mb-4 sm:mb-6 text-sm sm:text-base">₹5,000</div>
+                        <button class="bg-white text-purple-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition font-semibold text-sm sm:text-base">
                             Shop Now
                         </button>
                     </div>
                 </div>
 
                 <!-- Offer 3 -->
-                <div class="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-lg p-8 relative overflow-hidden">
-                    <div class="absolute top-4 right-4">
-                        <span class="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">40% OFF</span>
+                <div class="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-lg p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute top-3 sm:top-4 right-3 sm:right-4">
+                        <span class="bg-yellow-400 text-gray-900 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">40% OFF</span>
                     </div>
                     <div class="text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">Anniversary Special</h3>
-                        <p class="text-emerald-100 mb-6">Celebrate love with luxury gifts</p>
-                        <div class="text-3xl font-bold text-white mb-4">₹4,200</div>
-                        <div class="text-emerald-200 line-through mb-6">₹7,000</div>
-                        <button class="bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Anniversary Special</h3>
+                        <p class="text-emerald-100 mb-4 sm:mb-6 text-sm sm:text-base">Celebrate love with luxury gifts</p>
+                        <div class="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">₹4,200</div>
+                        <div class="text-emerald-200 line-through mb-4 sm:mb-6 text-sm sm:text-base">₹7,000</div>
+                        <button class="bg-white text-emerald-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition font-semibold text-sm sm:text-base">
                             Shop Now
                         </button>
                     </div>
@@ -1046,56 +1054,56 @@
     </section>
 
     <!-- Gift Consultation Section -->
-    <section class="py-16 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <section class="py-12 sm:py-16 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold text-white mb-6">Need Help Choosing?</h2>
-                    <p class="text-gray-300 text-lg mb-8">Our gift experts are here to help you find the perfect gift for any occasion. Get personalized recommendations based on your budget and preferences.</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Need Help Choosing?</h2>
+                    <p class="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8">Our gift experts are here to help you find the perfect gift for any occasion. Get personalized recommendations based on your budget and preferences.</p>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex items-start space-x-3 sm:space-x-4">
+                            <div class="w-6 sm:w-8 h-6 sm:h-8 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-xs sm:text-sm"></i>
                             </div>
                             <div>
-                                <h3 class="text-white font-semibold mb-2">Personal Consultation</h3>
-                                <p class="text-gray-300 text-sm">One-on-one sessions with our gift specialists</p>
+                                <h3 class="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Personal Consultation</h3>
+                                <p class="text-gray-300 text-xs sm:text-sm">One-on-one sessions with our gift specialists</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
+                        <div class="flex items-start space-x-3 sm:space-x-4">
+                            <div class="w-6 sm:w-8 h-6 sm:h-8 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-xs sm:text-sm"></i>
                             </div>
                             <div>
-                                <h3 class="text-white font-semibold mb-2">Custom Recommendations</h3>
-                                <p class="text-gray-300 text-sm">Tailored suggestions based on recipient preferences</p>
+                                <h3 class="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Custom Recommendations</h3>
+                                <p class="text-gray-300 text-xs sm:text-sm">Tailored suggestions based on recipient preferences</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
+                        <div class="flex items-start space-x-3 sm:space-x-4">
+                            <div class="w-6 sm:w-8 h-6 sm:h-8 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-xs sm:text-sm"></i>
                             </div>
                             <div>
-                                <h3 class="text-white font-semibold mb-2">Budget Planning</h3>
-                                <p class="text-gray-300 text-sm">Find amazing gifts within your price range</p>
+                                <h3 class="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Budget Planning</h3>
+                                <p class="text-gray-300 text-xs sm:text-sm">Find amazing gifts within your price range</p>
                             </div>
                         </div>
                     </div>
                     
-                    <button class="bg-rose-500 text-white px-8 py-3 rounded-lg hover:bg-rose-600 transition mt-8 font-semibold">
+                    <button class="bg-rose-500 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-rose-600 transition mt-6 sm:mt-8 font-semibold text-sm sm:text-base">
                         Book Consultation
                     </button>
                 </div>
                 
-                <div class="bg-gray-700 rounded-lg p-8">
-                    <h3 class="text-2xl font-bold text-white mb-6">Quick Gift Quiz</h3>
-                    <form class="space-y-6">
+                <div class="bg-gray-700 rounded-lg p-6 sm:p-8">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Quick Gift Quiz</h3>
+                    <form class="space-y-4 sm:space-y-6">
                         <div>
-                            <label class="block text-white mb-2">Occasion</label>
-                            <select class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">Occasion</label>
+                            <select class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                                 <option>Birthday</option>
                                 <option>Anniversary</option>
                                 <option>Wedding</option>
@@ -1106,8 +1114,8 @@
                         </div>
                         
                         <div>
-                            <label class="block text-white mb-2">Budget Range</label>
-                            <select class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">Budget Range</label>
+                            <select class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                                 <option>Under ₹1,000</option>
                                 <option>₹1,000 - ₹3,000</option>
                                 <option>₹3,000 - ₹5,000</option>
@@ -1117,8 +1125,8 @@
                         </div>
                         
                         <div>
-                            <label class="block text-white mb-2">Recipient Type</label>
-                            <select class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">Recipient Type</label>
+                            <select class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                                 <option>Family Member</option>
                                 <option>Friend</option>
                                 <option>Colleague</option>
@@ -1127,7 +1135,7 @@
                             </select>
                         </div>
                         
-                        <button type="submit" class="w-full bg-rose-500 text-white py-3 rounded-lg hover:bg-rose-600 transition font-semibold">
+                        <button type="submit" class="w-full bg-rose-500 text-white py-2 sm:py-3 rounded-lg hover:bg-rose-600 transition font-semibold text-sm sm:text-base">
                             Get Recommendations
                         </button>
                     </form>
@@ -1137,41 +1145,41 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="py-16 bg-gray-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-                <p class="text-gray-300 text-lg">Have questions about our gifts? We'd love to hear from you!</p>
-                <div class="w-20 h-1 bg-rose-500 mx-auto mt-4"></div>
+    <section class="py-12 sm:py-16 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Have questions about our gifts? We'd love to hear from you!</p>
+                <div class="w-16 sm:w-20 h-1 bg-rose-500 mx-auto mt-4"></div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-8">
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-800 rounded-lg p-6 sm:p-8">
+                <form class="space-y-4 sm:space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                            <label class="block text-white mb-2">First Name</label>
-                            <input type="text" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">First Name</label>
+                            <input type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                         </div>
                         <div>
-                            <label class="block text-white mb-2">Last Name</label>
-                            <input type="text" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">Last Name</label>
+                            <input type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                         </div>
                     </div>
                     
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                            <label class="block text-white mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">Email</label>
+                            <input type="email" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                         </div>
                         <div>
-                            <label class="block text-white mb-2">Phone</label>
-                            <input type="tel" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                            <label class="block text-white mb-2 text-sm sm:text-base">Phone</label>
+                            <input type="tel" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-white mb-2">Inquiry Type</label>
-                        <select class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none">
+                        <label class="block text-white mb-2 text-sm sm:text-base">Inquiry Type</label>
+                        <select class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base">
                             <option>Gift Recommendation</option>
                             <option>Custom Gift Request</option>
                             <option>International Shipping</option>
@@ -1181,12 +1189,12 @@
                     </div>
 
                     <div>
-                        <label class="block text-white mb-2">Message</label>
-                        <textarea rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none" placeholder="Tell us about your gift needs..."></textarea>
+                        <label class="block text-white mb-2 text-sm sm:text-base">Message</label>
+                        <textarea rows="4" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-rose-500 focus:outline-none text-sm sm:text-base" placeholder="Tell us about your gift needs..."></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="bg-rose-500 text-white px-8 py-3 rounded-lg hover:bg-rose-600 transition font-semibold">
+                        <button type="submit" class="bg-rose-500 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-rose-600 transition font-semibold text-sm sm:text-base">
                             Send Message
                         </button>
                     </div>
@@ -1196,30 +1204,41 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-rose-600">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 text-center">
+    <section class="py-12 sm:py-16 bg-rose-600">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">1000+</div>
-                    <p class="text-rose-100">Gifts Delivered</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-2">1000+</div>
+                    <p class="text-rose-100 text-sm sm:text-base">Gifts Delivered</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">50+</div>
-                    <p class="text-rose-100">Countries Served</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-2">50+</div>
+                    <p class="text-rose-100 text-sm sm:text-base">Countries Served</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">4.9</div>
-                    <p class="text-rose-100">Customer Rating</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-2">4.9</div>
+                    <p class="text-rose-100 text-sm sm:text-base">Customer Rating</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">24/7</div>
-                    <p class="text-rose-100">Support Available</p>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-2">24/7</div>
+                    <p class="text-rose-100 text-sm sm:text-base">Support Available</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 
     <!-- Modern Footer -->
     <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
