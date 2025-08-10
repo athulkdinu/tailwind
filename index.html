@@ -252,10 +252,45 @@
                     <button class="bg-gradient-to-r from-luxury-600 to-luxury-500 text-premium-900 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-luxury-500/30 transition-all duration-300 font-bold text-sm">
                         Get Quote
                     </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="lg:hidden text-white hover:text-luxury-400 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-premium-800 rounded-lg mt-4 p-4">
+        <div class="space-y-4">
+            <a href="#home" class="block text-premium-300 hover:text-luxury-400 transition-colors py-2">Home</a>
+            <a href="#stores" class="block text-premium-300 hover:text-luxury-400 transition-colors py-2">Services</a>
+            <a href="#events" class="block text-premium-300 hover:text-luxury-400 transition-colors py-2">Events</a>
+            <a href="#gallery" class="block text-premium-300 hover:text-luxury-400 transition-colors py-2">Gallery</a>
+            <a href="#about" class="block text-premium-300 hover:text-luxury-400 transition-colors py-2">About</a>
+            <div class="pt-2 border-t border-premium-700">
+                <div class="flex items-center text-premium-300 text-sm py-2">
+                    <i class="fas fa-phone mr-2 text-luxury-400"></i>
+                    <span class="font-medium">+91 9876543210</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 
          <!--  Hero Section -->
      <section id="home" class="relative min-h-screen premium-gradient overflow-hidden">
@@ -1588,7 +1623,7 @@
 
                                 </p>
                                 <p class="text-premium-300 leading-relaxed mb-6">
-From an intimate dinner under the stars to a grand hall filled with music and light, we approach every event as a once-in-a-lifetime story waiting to be told. Your story. And we’re here to make sure it’s unforgettable.
+From an intimate dinner under the stars to a grand hall filled with music and light, we approach every event as a once-in-a-lifetime story waiting to be told. Your story. And we're here to make sure it's unforgettable.
                                     
                                 </p>
                             </div>
