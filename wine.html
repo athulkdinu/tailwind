@@ -244,6 +244,25 @@
                     <button class="bg-gradient-to-r from-amber-600 to-yellow-500 text-amber-900 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300 font-bold text-sm">
                         Get Quote
                     </button>
+                    <button id="mobile-menu-button" class="lg:hidden text-white hover:text-amber-400 transition-colors" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-amber-950/90 backdrop-blur-sm border-t border-amber-800">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html#home" class="block text-amber-200 hover:text-amber-400 py-2">Home</a>
+                <a href="index.html#stores" class="block text-amber-200 hover:text-amber-400 py-2">Services</a>
+                <a href="index.html#events" class="block text-amber-200 hover:text-amber-400 py-2">Events</a>
+                <a href="index.html#gallery" class="block text-amber-200 hover:text-amber-400 py-2">Gallery</a>
+                <a href="index.html#about" class="block text-amber-200 hover:text-amber-400 py-2">About</a>
+                <div class="pt-2 border-t border-amber-800">
+                    <div class="flex items-center text-amber-200 text-sm py-2">
+                        <i class="fas fa-phone mr-2 text-amber-400"></i>
+                        <span class="font-medium">+91 9876543210</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -871,6 +890,42 @@
             </div>
         </div>
     </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const isOpen = !mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+        const icon = mobileMenuButton.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-bars', !isOpen);
+          icon.classList.toggle('fa-xmark', isOpen);
+          icon.classList.add('fa-solid');
+        }
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            const icon = mobileMenuButton.querySelector('i');
+            if (icon) {
+              icon.classList.add('fa-solid');
+              icon.classList.add('fa-bars');
+              icon.classList.remove('fa-xmark');
+            }
+          }
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 

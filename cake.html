@@ -47,15 +47,16 @@
 
         </div>
 
-                <!-- ...existing code... -->
+        <!-- ...existing code... -->
         <div class="absolute w-300  grid grid-cols-3 gap-8 mt-170 ms-60 mt-30">
-            
+
             <div class="grid grid-cols-2 gap-4 border border-gray-300 rounded-lg p-3 bg-white shadow">
                 <div><img class="border-radius-5" src="./media/c3.jpg" width="110px" height="150px" alt=""></div>
                 <div class="text-center text-lg font-bold mt-10">Belgian Chocolate </div>
             </div>
             <div class="grid grid-cols-2 gap-4 border border-gray-300 rounded-lg p-3 bg-white shadow">
-                <div><img class="border-radius-5" src="./media/c4.jpg" width="110px" height="150px"width="110px" height="150px" alt=""></div>
+                <div><img class="border-radius-5" src="./media/c4.jpg" width="110px" height="150px" width="110px"
+                        height="150px" alt=""></div>
                 <div class="text-center text-lg font-bold mt-10">Royal fruit cake </div>
             </div>
             <div class="grid grid-cols-2 gap-4 border border-gray-300 rounded-lg p-3 bg-white shadow">
@@ -71,22 +72,446 @@
         <h1 class="text-center text-4xl font-bold">Our Signature Cakes</h1>
         <h1 class="ms-19 text-2xl font-bold mt-10">Chocolate Cakes</h1>
         <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
-            <div class="border border-gray-300 rounded-lg p-3 bg-white shadow">
-                <img class="border-radius-5" src="./media/c1.jpg" width="110px" height="150px" alt="">
-                <div class="text-center text-lg font-bold mt-10">Classic Vanilla Cake</div>
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
             </div>
-            <div class="border border-gray-300 rounded-lg p-3 bg-white shadow">
-                <img class="border-radius-5" src="./media/c2.jpg" width="110px" height="150px" alt="">
-                <div class="text-center text-lg font-bold mt-10">Red Velvet Cake</div>
+            <!-- 2 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
             </div>
-            <div class="border border-gray-300 rounded-lg p-3 bg-white shadow">
-                <img class="border-radius-5" src="./media/c3.jpg" width="110px" height="150px" alt="">
-                <div class="text-center text-lg font-bold mt-10">Belgian Chocolate Cake</div>
+            <!-- 3 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
             </div>
-            <div class="border border-gray-300 rounded-lg p-3 bg-white shadow">
-                <img class="border-radius-5" src="./media/c3.jpg" width="110px" height="150px" alt="">
-                <div class="text-center text-lg font-bold mt-10">Belgian Chocolate Cake</div>
+            <!-- 4 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
             </div>
+            <!--  -->
+        </div>
+        <!-- ----------------------- -->
+         <h1 class="ms-19 text-2xl font-bold mt-10">Chocolate Cakes</h1>
+        <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+        <!-- -------------------------------------------------- -->
+         <h1 class="ms-19 text-2xl font-bold mt-10">Chocolate Cakes</h1>
+        <div class="grid grid-cols-4 gap-8 mt-10 mx-15">
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div
+                class="border border-gray-200 rounded-2xl p-6 bg-white shadow-lg flex flex-col items-center space-y-5 transition-transform hover:-translate-y-1 hover:shadow-2xl duration-200">
+                <img class="rounded-xl shadow-md object-cover" src="./media/c1.jpg" width="160" height="200"
+                    alt="Chocolate Cake">
+                <div class="w-full">
+                    <h2 class="text-center text-2xl font-bold mb-1 text-gray-900">Chocolate Cake</h2>
+                    <div class="flex justify-center items-center space-x-2 mb-2">
+                        <span
+                            class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">Best
+                            Seller</span>
+                        <span
+                            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-semibold">Fresh</span>
+                    </div>
+                    <div class="space-y-1 text-base font-medium text-gray-700 text-center">
+                        <p>🍇 Chardonnay, Pinot Noir</p>
+                        <p>France 🇫🇷</p>
+                        <p>🥂 Champagne</p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 mt-3">
+                        <span class="text-gray-500 text-sm">MRP</span>
+                        <span class="text-gray-400 line-through text-sm">₹22,500</span>
+                        <span class="text-green-600 font-bold text-lg">₹20,999</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex items-center border border-white rounded">
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">-</button>
+                                <span class="px-4 py-2">1</span>
+                                <button class="px-4 py-2 hover:bg-white hover:text-black transition-colors">+</button>
+                            </div>
+                    <button
+                        class="ml-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full font-bold shadow hover:from-pink-600 hover:to-yellow-500 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <!--  -->
         </div>
     </section>
     <!--  -->
